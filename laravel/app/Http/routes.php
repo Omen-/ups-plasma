@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'home', function()
+{
+  return 'Home';
+}]);
+
+Route::get('profile', ['middleware' => 'auth', function()
+{
+  return 'Profile of ' . Auth::user()->email;
+}]);
+
+Route::get('login', 'SessionsController@create');
+Route::post('login', 'SessionsController@store');
+Route::get('logout', 'SessionsController@destroy');
+
+Route::resource('sessions', 'SessionsController', ['only' => ['index', 'create', 'destroy']]);
