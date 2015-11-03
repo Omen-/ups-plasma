@@ -13,7 +13,7 @@
 
 Route::get('/', ['as' => 'home', function()
 {
-  return 'Home';
+  return view('home');
 }]);
 
 Route::get('profile', ['middleware' => 'auth', function()
