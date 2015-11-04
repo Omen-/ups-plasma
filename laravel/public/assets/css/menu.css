@@ -1,0 +1,63 @@
+.banner .menu
+{
+  position: absolute;
+  bottom: 8%;
+  right: 3.5%;
+}
+
+.banner .menu .list-menu
+{
+  background-color: white;
+  padding: 2px;
+}
+
+.banner .menu .list-menu a
+{
+  padding: 6% 25%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3d7ec0;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.banner .menu .list-menu .dropdown-link-closed,
+.banner .menu .list-menu > li > a:hover
+{
+  color:white;
+  background-color: #3d7ec0;
+}
+
+.banner .menu .dropdown-link-opened .dropdown-icon::after
+{
+  font-family: FontAwesome;
+  content: '\f107';
+  position: absolute;
+  margin-left: 10px;
+}
+
+.banner .menu .dropdown-link-closed .dropdown-icon::after
+{
+  font-family: FontAwesome;
+  content: '\f106';
+  position: absolute;
+  margin-left: 10px;
+
+}
+
+.banner .menu .list-submenu
+{
+  /*display: none;*/
+}
+
+.banner .menu .list-submenu > li
+{
+  background-color: gray;
+}
+
+.banner .menu .list-submenu > li > a
+{
+  color: white;
+}

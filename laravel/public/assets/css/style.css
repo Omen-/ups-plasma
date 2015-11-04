@@ -1,0 +1,48 @@
+.banner
+{
+  position: relative;
+}
+
+.banner > img
+{
+  width:100%;
+}
+
+.news h2
+{
+  text-transform: uppercase;
+  color: #3d7ec0;
+}
+
+.news .item
+{
+  text-align: center;
+  background: white;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.news .item:hover
+{
+  border: 1px solid black;
+}
+
+.news .item > a > img
+{
+  width: 100%;
+}
+
+.news .item > h3
+{
+  color: #3d7ec0;
+}
+
+.news .item > p
+{
+  text-align: justify;
+}
+
+footer
+{
+  background-color: #3d7ec0;
+}

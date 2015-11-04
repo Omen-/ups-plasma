@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', ['as' => 'home', function()
-{
-  return view('home');
-}]);
+Route::get('/', 'HomeController@home');
 
 Route::get('profile', ['middleware' => 'auth', function()
 {
