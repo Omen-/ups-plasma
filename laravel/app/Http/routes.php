@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@home');
 
+Route::get('/news/{id}-{title}', 'NewsController@show');
+
 Route::get('profile', ['middleware' => 'auth', function()
 {
   return 'Profile of ' . Auth::user()->email;

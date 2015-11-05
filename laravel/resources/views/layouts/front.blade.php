@@ -31,7 +31,7 @@
 
 
     <section class="container">
-      @yield('content');
+      @yield('content')
     </section>
 
     <footer class="container" style="height:200px; margin-top:20px;">
