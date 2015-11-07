@@ -9,8 +9,8 @@ use App\Models\News\News;
 
 class HomeController extends Controller
 {
-    public function home()
-    {
-      return view('home', ['news' => News::orderBy('created_at','DESC')->limit(3)->get()]);
-    }
+  public function home()
+  {
+    return view('home', ['news' => News::orderBy('created_at','DESC')->limit(3)->get()]);
+  }
 }

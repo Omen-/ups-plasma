@@ -19,7 +19,7 @@ class SessionsController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -45,8 +45,7 @@ class SessionsController extends Controller
         'password' => $request->input('password')
       ]);
 
-      if($attempt)
-        return Redirect::intended('/');
+      return Redirect::back();
     }
 
     /**
@@ -58,6 +57,6 @@ class SessionsController extends Controller
     public function destroy()
     {
         Auth::logout();
-        return Redirect::home();
+        return Redirect::back();
     }
 }

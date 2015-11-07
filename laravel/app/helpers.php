@@ -20,3 +20,8 @@ function sluggify($url)
 
     return $url;
 }
+
+function shortify($content, $words)
+{
+  return preg_replace('/\s+?(\S+)?$/', '', substr(strip_tags($content), 0, $words));
+}

@@ -4,6 +4,10 @@
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet"></link>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="/assets/css/style.css" rel="stylesheet"></link>
+  <link href="/assets/css/navbar.css" rel="stylesheet"></link>
+  @if(!Auth::check())
+  <link href="/assets/css/login.css" rel="stylesheet"></link>
+  @endif
   @yield('css')
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

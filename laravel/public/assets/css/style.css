@@ -39,9 +39,9 @@
   border: 1px solid black;
 }
 
-.news .item > a > img
+.news .item img
 {
-  width: 100%;
+  max-width: 100%;
 }
 
 .news .item > h3

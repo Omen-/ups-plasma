@@ -19,7 +19,7 @@ class CreateNewsTable extends Migration
           $table->foreign('author_id')->references('id')->on('users');
           $table->string('title');
           $table->string('image');
-          $table->string('content');
+          $table->text('content');
           $table->timestamps();
       });
     }
@@ -31,6 +31,6 @@ class CreateNewsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('news');
     }
 }

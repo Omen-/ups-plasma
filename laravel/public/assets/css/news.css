@@ -20,13 +20,16 @@
 
 .news-image
 {
-  float: left;
   margin-bottom: 2em;
+}
+
+img
+{
+  max-width: 100%;
 }
 
 .news-image .news-image-desc
 {
-  text-align: right;
   font-style: italic;
   color: gray;
 }

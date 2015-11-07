@@ -11,7 +11,11 @@ class NewsController extends Controller
 {
   public function show($id)
   {
-    //var_dump(News::find($id)->title);
-    return view('news');
+    return view('news', ['currentNews' => News::find($id)]);
+  }
+
+  public function index()
+  {
+    return view('newslist');
   }
 }

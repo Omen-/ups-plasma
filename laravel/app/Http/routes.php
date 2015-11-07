@@ -15,9 +15,20 @@ Route::get('/', 'HomeController@home');
 
 Route::get('/news/{id}-{title}', 'NewsController@show');
 
+Route::get('/news', 'NewsController@index');
+
 Route::get('profile', ['middleware' => 'auth', function()
 {
   return 'Profile of ' . Auth::user()->email;
+}]);
+
+Route::get('about', [function()
+{
+  $filename = 'plaquette.pdf';
+  return Response::make(file_get_contents(storage_path().DIRECTORY_SEPARATOR.$filename), 200, [
+      'Content-Type' => 'application/pdf',
+      'Content-Disposition' => 'inline; '.$filename,
+    ]);
 }]);
 
 Route::get('login', 'SessionsController@create');
