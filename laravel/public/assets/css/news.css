@@ -1,0 +1,44 @@
+.news-container
+{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.news-title
+{
+  /*color: #3d7ec0;*/
+  text-align: center;
+}
+
+.news-title-separator
+{
+  height: 2px;
+  width: 100%;
+  background-color: #3d7ec0;
+  margin-bottom: 1em;
+}
+
+.news-image
+{
+  float: left;
+  margin-bottom: 2em;
+}
+
+.news-image .news-image-desc
+{
+  text-align: right;
+  font-style: italic;
+  color: gray;
+}
+
+.news-content
+{
+  clear: both;
+}
+
+.news-author
+{
+  text-align: right;
+  margin-top: 3em;
+  color: gray;
+}

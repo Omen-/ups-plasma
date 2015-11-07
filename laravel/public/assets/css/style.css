@@ -1,3 +1,15 @@
+.nav-normal
+{
+  background-color: #3d7ec0;
+}
+
+.btn-nav
+{
+  margin: 5px;
+  background-color: #3d7ec0;
+  color: white;
+}
+
 .banner
 {
   position: relative;
