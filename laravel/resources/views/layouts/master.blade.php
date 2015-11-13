@@ -6,5 +6,6 @@
   </head>
   <body>
     @include('includes.navbar')
+    @include('includes.footer')
   </body>
 </html>

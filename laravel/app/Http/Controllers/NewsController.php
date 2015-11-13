@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\News\News;
+use App\Models\News\Category;
 
 class NewsController extends Controller
 {
@@ -16,6 +17,6 @@ class NewsController extends Controller
 
   public function index()
   {
-    return view('newslist');
+    return view('newslist',  ['news' => News::orderBy('created_at','DESC')->limit(3)->get(), 'categories' => Category::all()]);
   }
 }

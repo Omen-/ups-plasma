@@ -2,6 +2,7 @@
 
 namespace App\Models\Users;
 
+use App\Models\Users\Role;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -23,17 +24,12 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $table = 'users';
 
-    public function student()
-    {
-      return $this->hasOne('App\Models\Users\Student');
-    }
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['email', 'password', 'student'];
+    protected $fillable = ['first_name', 'last_name', 'email'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -41,4 +37,19 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function roles()
+    {
+      return $this->belongsToMany('App\Models\Users\Role', 'users_roles_rel');
+    }
+
+    public function isAdmin()
+    {
+      foreach($this->roles()->getResults()->toArray() as $role)
+      {
+        if(true)
+          return true;
+      }
+      return false;
+    }
 }

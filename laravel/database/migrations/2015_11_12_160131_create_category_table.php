@@ -12,9 +12,6 @@ class CreateCategoryTable extends Migration
      */
     public function up()
     {
-      Schema::drop('news_category');
-      Schema::drop('news_category_rel');
-
       Schema::create('news_category', function (Blueprint $table)
       {
           $table->increments('id');

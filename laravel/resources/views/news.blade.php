@@ -24,7 +24,7 @@
       </figure>
       <div class="news-content">
         {!! $currentNews->content !!}
-        <p class="news-author">John DOE</p>
+        <p class="news-author">{{ $currentNews->author->first_name . ' ' . $currentNews->author->last_name }}</p>
       </div>
     </div>
   </div>
