@@ -43,13 +43,23 @@ class User extends Model implements AuthenticatableContract,
       return $this->belongsToMany('App\Models\Users\Role', 'users_roles_rel');
     }
 
-    public function isAdmin()
+    public function trainings()
+    {
+      return $this->belongsToMany('App\Models\Training', 'users_training_rel');
+    }
+
+    public function hasRole($search)
     {
       foreach($this->roles()->getResults()->toArray() as $role)
       {
-        if(true)
+        if($role['title'] == $search)
           return true;
       }
       return false;
+    }
+
+    public function isAdmin()
+    {
+      return $this->hasRole('admin');
     }
 }

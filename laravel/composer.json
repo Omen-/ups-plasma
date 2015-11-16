@@ -7,7 +7,8 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "laravelcollective/html": "~5.0"
+        "laravelcollective/html": "~5.0",
+        "google/apiclient": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -18,6 +19,7 @@
     "autoload": {
         "files": ["app/helpers.php"],
         "classmap": [
+            "vendor/google/apiclient/src/Google",
             "database"
         ],
         "psr-4": {
