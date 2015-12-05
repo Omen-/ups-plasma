@@ -19,6 +19,8 @@ Route::get('/news', 'NewsController@index');
 
 Route::get('/calendar/{id}', 'CalendarController@show');
 
+Route::get('/page/{id}', 'PagesController@show');
+
 Route::get('profile', ['middleware' => 'auth', function()
 {
   return 'Profile of ' . Auth::user()->email;

@@ -29,7 +29,7 @@
     </section>
 
 
-
+    @include('includes.login')
     <section class="container">
       @yield('content')
     </section>

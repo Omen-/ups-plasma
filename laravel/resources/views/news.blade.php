@@ -8,20 +8,13 @@
 @stop
 
 @section('content')
-@include('includes.login')
 <section class="container news-container">
   <div class="row">
     <h2 class="news-title">{{ $currentNews->title }}</h2>
     <div class="news-title-separator"></div>
   </div>
   <div class="row">
-    <div class="col-xs-8">
-      <figure class="news-image">
-        <img src="/assets/img/news/{{ $currentNews->image }}" alt="{{ $currentNews->image_desc }}" />
-        <figcaption>
-          <p class="news-image-desc">{{ $currentNews->image_desc }}</p>
-        </figcaption>
-      </figure>
+    <div class="col-md-offset-2 col-xs-8">
       <div class="news-content">
         {!! $currentNews->content !!}
         <p class="news-author">{{ $currentNews->author->first_name . ' ' . $currentNews->author->last_name }}</p>

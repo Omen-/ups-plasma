@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-<div class="container">
+<section class="container">
   <h1 class="page-header">Flux d'informations</h1>
   <div class="row">
     <div class="col-xs-12">
@@ -33,5 +33,5 @@
     </div>
     @endforeach
   </div>
-</div>
+</section>
 @stop

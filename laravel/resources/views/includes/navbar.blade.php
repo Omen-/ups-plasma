@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-custom navbar-static-top">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">Master STP</a>
@@ -23,7 +23,14 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/admin/news">Gérer les news</a></li>
+            <li><a href="/admin/news"><i class="fa fa-pencil-square-o"></i> Ecrire une news</a></li>
+            @if(isset($currentNews))
+            <li><a href="/admin/news/delete/{{ $currentNews->id }}"><i class="fa fa-pencil"></i> Editer cette news</a></li>
+            <li><a href="/admin/news/edit/{{ $currentNews->id }}"><i class="fa fa-trash"></i> Supprimer cette news</a></li>
+            @endif
+            <li role="separator" class="divider"></li>
+            <li><a href="/admin/news"><i class="fa fa-file"></i> Ajouter une page</a></li>
+
           </ul>
         </li>
         @endif
