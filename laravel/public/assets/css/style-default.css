@@ -1,11 +1,28 @@
-body
+.body
 {
   background-color: lightgray;
 
 }
 
-section
+hr
 {
+  height: 2px;
+  width: 80%;
+  background-color: #3d7ec0;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  border: none;
+}
+
+.content-section
+{
+  border: 1px solid transparent;
   background-color: white;
   padding: 20px;
+}
+
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
 }

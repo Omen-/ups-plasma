@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Pages\Page;
 
 class PagesController extends Controller
 {
@@ -15,7 +16,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.index.page', ['pages' => Page::all()]);
     }
 
     /**
@@ -25,7 +26,7 @@ class PagesController extends Controller
      */
     public function create()
     {
-        //
+      return view('admin.create.page');
     }
 
     /**
@@ -36,7 +37,14 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      if($request->has('title') && $request->has('content'))
+      {
+        $page = new \App\Models\Pages\Page(["title" => $request->input('title'), "content" => $request->input('content')]);
+        $page->save();
+        return redirect('/page/' . $page->id . '-' . ucwords($page->title));
+      }
+      else
+        return redirect('/');
     }
 
     /**
@@ -47,7 +55,7 @@ class PagesController extends Controller
      */
     public function show($id)
     {
-        return view('page');
+      return view('pages.page', ['currentPage' => Page::find($id)]);
     }
 
     /**
@@ -58,7 +66,7 @@ class PagesController extends Controller
      */
     public function edit($id)
     {
-        //
+      return view('admin.edit.page', ['currentEditedPage' => Page::find($id)]);
     }
 
     /**
@@ -70,7 +78,16 @@ class PagesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      if($request->has('title') && $request->has('content'))
+      {
+        $page = Page::find($id);
+        $page->title = $request->input('title');
+        $page->content = $request->input('content');
+        $page->save();
+        return redirect('/page/' . $page->id . '-' . ucwords($page->title));
+      }
+      else
+        return redirect('/');
     }
 
     /**
@@ -81,6 +98,7 @@ class PagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Page::destroy($id);
+        return \Redirect::back();
     }
 }

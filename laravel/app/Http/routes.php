@@ -19,13 +19,6 @@ Route::get('/news', 'NewsController@index');
 
 Route::get('/calendar/{id}', 'CalendarController@show');
 
-Route::get('/page/{id}', 'PagesController@show');
-
-Route::get('profile', ['middleware' => 'auth', function()
-{
-  return 'Profile of ' . Auth::user()->email;
-}]);
-
 Route::get('about', [function()
 {
   $filename = 'plaquette.pdf';
@@ -40,3 +33,11 @@ Route::post('login', 'SessionsController@store');
 Route::get('logout', 'SessionsController@destroy');
 
 Route::resource('sessions', 'SessionsController', ['only' => ['index', 'create', 'destroy']]);
+
+Route::get('/page/{id}-{title}', 'PagesController@show');
+Route::get('/admin/page/create', 'PagesController@create');
+Route::post('/admin/page/store', 'PagesController@store');
+Route::get('/admin/page/edit/{id}', 'PagesController@edit');
+Route::post('/admin/page/update/{id}', 'PagesController@update');
+Route::get('/admin/page/index', 'PagesController@index');
+Route::get('/admin/page/destroy/{id}', 'PagesController@destroy');

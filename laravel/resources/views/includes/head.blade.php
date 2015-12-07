@@ -15,4 +15,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   @yield('js')
+
+  <title>Master STP - @yield('title')</title>
 </head>

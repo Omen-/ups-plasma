@@ -12,11 +12,11 @@ class NewsController extends Controller
 {
   public function show($id)
   {
-    return view('news', ['currentNews' => News::find($id)]);
+    return view('news.news', ['currentNews' => News::find($id)]);
   }
 
   public function index()
   {
-    return view('newslist',  ['news' => News::orderBy('created_at','DESC')->limit(3)->get(), 'categories' => Category::all()]);
+    return view('news.list',  ['news' => News::all(), 'categories' => Category::all()]);
   }
 }

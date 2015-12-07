@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', 'Liste des news')
+
 @section('css')
 <link href="/assets/css/badgebox.css" rel="stylesheet"></link>
 @stop
@@ -9,7 +11,7 @@
 @stop
 
 @section('content')
-<section class="container">
+<section class="container content-section">
   <h1 class="page-header">Flux d'informations</h1>
   <div class="row">
     <div class="col-xs-12">

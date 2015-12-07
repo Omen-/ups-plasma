@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', $currentNews->title)
+
 @section('css')
 <link href="/assets/css/news.css" rel="stylesheet"></link>
 @stop
@@ -8,7 +10,7 @@
 @stop
 
 @section('content')
-<section class="container news-container">
+<section class="container news-container content-section">
   <div class="row">
     <h2 class="news-title">{{ $currentNews->title }}</h2>
     <div class="news-title-separator"></div>
