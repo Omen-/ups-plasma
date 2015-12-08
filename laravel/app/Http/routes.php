@@ -13,12 +13,6 @@
 
 Route::get('/', 'HomeController@home');
 
-Route::get('/news/{id}-{title}', 'NewsController@show');
-
-Route::get('/news', 'NewsController@index');
-
-Route::get('/calendar/{id}', 'CalendarController@show');
-
 Route::get('about', [function()
 {
   $filename = 'plaquette.pdf';
@@ -28,16 +22,39 @@ Route::get('about', [function()
     ]);
 }]);
 
-Route::get('login', 'SessionsController@create');
-Route::post('login', 'SessionsController@store');
-Route::get('logout', 'SessionsController@destroy');
-
 Route::resource('sessions', 'SessionsController', ['only' => ['index', 'create', 'destroy']]);
 
+Route::group(['middleware' => ['guest']], function()
+{
+  Route::get('login', 'SessionsController@create');
+  Route::post('login', 'SessionsController@store');
+});
+
+Route::group(['middleware' => ['auth']], function()
+{
+  //Route::get('/profile', '@show');
+  Route::get('/calendar/{id}', 'CalendarController@show');
+  Route::get('logout', 'SessionsController@destroy');
+});
+
+Route::group(['middleware' => ['auth', 'admin']], function()
+{
+  Route::get('/admin/page/create', 'PagesController@create');
+  Route::post('/admin/page/store', 'PagesController@store');
+  Route::get('/admin/page/edit/{id}', 'PagesController@edit');
+  Route::post('/admin/page/update/{id}', 'PagesController@update');
+  Route::get('/admin/page/index', 'PagesController@index');
+  Route::get('/admin/page/destroy/{id}', 'PagesController@destroy');
+
+  Route::get('/admin/news/create', 'NewsController@create');
+  Route::post('/admin/news/store', 'NewsController@store');
+  Route::get('/admin/news/edit/{id}', 'NewsController@edit');
+  Route::post('/admin/news/update/{id}', 'NewsController@update');
+  Route::get('/admin/news/index', 'NewsController@index');
+  Route::get('/admin/news/destroy/{id}', 'NewsController@destroy');
+});
+
 Route::get('/page/{id}-{title}', 'PagesController@show');
-Route::get('/admin/page/create', 'PagesController@create');
-Route::post('/admin/page/store', 'PagesController@store');
-Route::get('/admin/page/edit/{id}', 'PagesController@edit');
-Route::post('/admin/page/update/{id}', 'PagesController@update');
-Route::get('/admin/page/index', 'PagesController@index');
-Route::get('/admin/page/destroy/{id}', 'PagesController@destroy');
+
+Route::get('/news/{id}-{title}', 'NewsController@show');
+Route::get('/news', 'NewsController@all');

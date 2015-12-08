@@ -37,7 +37,7 @@
 
 </script>
 
-<div class="container">
+<div class="container content-section">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
   	   <div id='calendar'></div>
