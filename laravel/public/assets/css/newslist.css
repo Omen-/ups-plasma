@@ -1,0 +1,46 @@
+.news-tile
+{
+  position:relative;
+  margin-bottom: 2em;
+  max-width:320px;
+  max-height: 180px;
+}
+
+.news-tile .news-tile-text
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color:white;
+  width: 100%;
+  padding: 0 1em;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.news-tile-text-category
+{
+
+}
+
+.news-tile-text-date
+{
+  color: gray;
+  float: right;
+}
+
+.news-thumbnail
+{
+  background: black;
+}
+
+.news-thumbnail > img
+{
+  opacity: 0.7;
+}
+
+#collapsable-news[data-columns]::before
+{
+	content: '3';
+}

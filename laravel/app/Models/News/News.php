@@ -19,6 +19,11 @@ class News extends Model
   {
     return $this->belongsToMany('App\Models\News\Category', 'news_category_rel');
   }
+
+  public function getCategory()
+  {
+    return $this->categories->first();
+  }
 }
 
 ?>

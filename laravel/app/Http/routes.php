@@ -33,7 +33,7 @@ Route::group(['middleware' => ['guest']], function()
 Route::group(['middleware' => ['auth']], function()
 {
   //Route::get('/profile', '@show');
-  Route::get('/calendar/{id}', 'CalendarController@show');
+  Route::get('/calendar', 'CalendarController@index');
   Route::get('logout', 'SessionsController@destroy');
 });
 

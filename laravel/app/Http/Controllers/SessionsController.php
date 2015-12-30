@@ -40,10 +40,25 @@ class SessionsController extends Controller
      */
     public function store(Request $request)
     {
-      $attempt = Auth::attempt([
+      $rules = array(
+        'email' => 'required|email',
+        'password' => 'required',
+      );
+
+      $validator = \Validator::make(\Input::all(), $rules);
+
+      if ($validator->fails())
+      {
+          return redirect()->back()->withInput($request->except('password'))->withErrors($validator);
+      }
+
+      if(!Auth::attempt([
         'email' => $request->input('email'),
         'password' => $request->input('password')
-      ]);
+      ]))
+      {
+        return redirect()->back()->withInput($request->except('password'))->withErrors(['Echec d\'authentification']);
+      }
 
       return Redirect::back();
     }

@@ -23,7 +23,8 @@
         @foreach($news as $n)
         <tr>
           <th class="vertical-align-middle" scope="row">{{ $n->id }}</th>
-          <td class="vertical-align-middle">{{ $n->title }}</td>
+
+          <td class="vertical-align-middle">{{ shortify($n->title, 35) }}</td>
           <td class="vertical-align-middle">{{ $n->author->first_name . ' ' . ucwords($n->author->last_name[0]) . '.' }}</td>
           <td class="vertical-align-middle">{{ $n->categories->first()->title }}</td>
           <td class="vertical-align-middle">{{ $n->updated_at }}</td>

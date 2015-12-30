@@ -9,8 +9,8 @@ use App\Models\Training;
 
 class CalendarController extends Controller
 {
-  public function show($id)
+  public function index()
   {
-    return view('calendar', ['calendarId' => Training::find($id)->calendar_id]);
+    return view('calendar', ['trainings' => \Auth::user()->trainings]);
   }
 }

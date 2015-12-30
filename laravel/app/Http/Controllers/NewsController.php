@@ -19,7 +19,7 @@ class NewsController extends Controller
 
   public function all()
   {
-    return view('news.list',  ['news' => News::all(), 'categories' => Category::all()]);
+    return view('news.list',  ['news' => News::orderBy('updated_at','DESC')->get(), 'categories' => Category::all()]);
   }
 
   public function create()
@@ -29,29 +29,41 @@ class NewsController extends Controller
 
   public function store(Request $request)
   {
-    if($request->has('title') && $request->has('content') && ($request->has('newCategory') || $request->has('category')))
-    {
-      if($request->has('newCategory') && !(Category::where('title', '=', $request->input('title'))->first()))
-      {
-        $category = new Category(["title" => $request->input('newCategory')]);
-        $category->save();
-      }
-      else if(Category::find($request->input('category')))
-      {
-        $category = Category::find($request->input('category'));
-      }
-      else
-      {
-        return redirect('/');
-      }
+    $rules = array(
+      'image' => 'required|image|mimes:jpeg,jpg,png,bmp,gif,svg',
+      'title' => 'required',
+      'content' => 'required',
+      'category' => 'required_without:newCategory',
+      'newCategory' => 'required_without:category',
+    );
 
-      $news = new \App\Models\News\News(["title" => $request->input('title'), "content" => $request->input('content'), "author_id" => \Auth::user()->id]);
-      $news->save();
-      $news->categories()->save($category);
-      return redirect('/news/' . $news->id . '-' . ucwords($news->title));
+    $validator = \Validator::make(\Input::all(), $rules);
+
+    if ($validator->fails())
+    {
+        return redirect()->back()->withInput()->withErrors($validator);
+    }
+
+    if($request->has('newCategory') && !(Category::where('title', '=', $request->input('title'))->first()))
+    {
+      $category = new Category(["title" => $request->input('newCategory')]);
+      $category->save();
+    }
+    else if(Category::find($request->input('category')))
+    {
+      $category = Category::find($request->input('category'));
     }
     else
-      return redirect('/');
+    {
+      return redirect()->back()->withInput()->withErrors([trans('news.category')]);
+    }
+
+    $this->saveNewsImage($request->file('image'));
+
+    $news = new \App\Models\News\News(["title" => $request->input('title'), "content" => $request->input('content'), "author_id" => \Auth::user()->id, "image" => $newFilename]);
+    $news->save();
+    $news->categories()->save($category);
+    return redirect('/news/' . $news->id . '-' . sluggify($news->title));
   }
 
   public function edit($id, Request $request)
@@ -61,16 +73,35 @@ class NewsController extends Controller
 
   public function update($id, Request $request)
   {
-    if(News::find($id) && $request->has('title') && $request->has('content'))
+    $rules = array(
+      'image' => 'image|mimes:jpeg,jpg,png,bmp,gif,svg',
+      'title' => 'required',
+      'content' => 'required',
+    );
+
+    $validator = \Validator::make(\Input::all(), $rules);
+
+    if ($validator->fails())
     {
-      $news = News::find($id);
-      $news->title = $request->input('title');
-      $news->content = $request->input('content');
-      $news->save();
-      return redirect('/news/' . $news->id . '-' . ucwords($news->title));
+        return redirect()->back()->withInput()->withErrors($validator);
     }
-    else
-      return redirect('/');
+
+    if(!News::find($id))
+    {
+      return redirect()->back()->withInput()->withErrors(['News introuvable']);
+    }
+
+    $news = News::find($id);
+
+    if($request->hasFile('image'))
+    {
+      $news->image = $this->updateNewsImage($request->file('image'), $news->image);
+    }
+
+    $news->title = $request->input('title');
+    $news->content = $request->input('content');
+    $news->save();
+    return redirect('/news/' . $news->id . '-' . sluggify($news->title));
   }
 
   public function index(Request $request)
@@ -84,5 +115,20 @@ class NewsController extends Controller
     News::destroy($id);
 
     return \Redirect::back();
+  }
+
+  private function saveNewsImage($file)
+  {
+    $newFilename = uniqid() . cleanFileName($file->getClientOriginalName());
+    $destinationPath = public_path('assets\\img\\news\\');
+    $uploadSuccess = \Image::make($file->getRealPath())->fit(320, 180)->save($destinationPath . $newFilename);
+    return $newFilename;
+  }
+
+  private function updateNewsImage($file, $name)
+  {
+    $destinationPath = public_path('assets\\img\\news\\');
+    $uploadSuccess = \Image::make($file->getRealPath())->fit(320, 180)->save($destinationPath . $name);
+    return $name;
   }
 }

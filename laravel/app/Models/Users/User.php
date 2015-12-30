@@ -62,4 +62,9 @@ class User extends Model implements AuthenticatableContract,
     {
       return $this->hasRole('admin');
     }
+
+    public function isStudent()
+    {
+      return $this->hasRole('student');
+    }
 }

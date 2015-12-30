@@ -2,26 +2,17 @@
 
 function sluggify($url)
 {
-    # Prep string with some basic normalization
-    $url = strtolower($url);
-    $url = strip_tags($url);
-    $url = stripslashes($url);
-    $url = html_entity_decode($url);
-
-    # Remove quotes (can't, etc.)
-    $url = str_replace('\'', '', $url);
-
-    # Replace non-alpha numeric with hyphens
-    $match = '/[^a-z0-9]+/';
-    $replace = '-';
-    $url = preg_replace($match, $replace, $url);
-
-    $url = trim($url, '-');
-
-    return $url;
+    return str_slug($url, "-");
 }
 
 function shortify($content, $words)
 {
-  return preg_replace('/\s+?(\S+)?$/', '', substr(strip_tags($content), 0, $words));
+  $str = trim(preg_replace('/\s+?(\S+)?$/', '', substr(strip_tags($content), 0, $words)), chr(0xC2).chr(0xA0));
+  $converted = strtr($str, array_flip(get_html_translation_table(HTML_ENTITIES, ENT_QUOTES)));
+  return trim($converted, chr(0xC2).chr(0xA0));
+}
+
+function cleanFileName($fileName)
+{
+  return preg_replace(array('/\s/', '/\.[\.]+/', '/[^\w_\.\-]/'), array('_', '.', ''), $fileName);
 }
