@@ -52,6 +52,8 @@ Route::group(['middleware' => ['auth', 'admin']], function()
   Route::post('/admin/news/update/{id}', 'NewsController@update');
   Route::get('/admin/news/index', 'NewsController@index');
   Route::get('/admin/news/destroy/{id}', 'NewsController@destroy');
+
+  Route::get('/admin/training/index', 'TrainingsController@index');
 });
 
 Route::get('/page/{id}-{title}', 'PagesController@show');

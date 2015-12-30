@@ -15,7 +15,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informations <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/about"><i class="fa fa-file-pdf-o"></i> Présentation du parcours</a></li>
+            <li><a href="/about"><i class="fa fa-fw fa-file-pdf-o"></i> Présentation du parcours</a></li>
 
           </ul>
         </li>
@@ -35,30 +35,30 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/admin/news/create"><i class="fa fa-pencil-square-o"></i> Ecrire une news</a></li>
-            <li><a href="/admin/news/index"><i class="fa fa-cog"></i> Gérer les news</a></li>
+            <li><a href="/admin/news/create"><i class="fa fa-fw fa-pencil-square-o"></i> Ecrire une news</a></li>
+            <li><a href="/admin/news/index"><i class="fa fa-fw fa-cog"></i> Gérer les news</a></li>
             @if(isset($currentNews))
-            <li><a href="/admin/news/edit/{{ $currentNews->id }}"><i class="fa fa-pencil"></i> Editer cette news</a></li>
-            <li><a href="/admin/news/destroy/{{ $currentNews->id }}"><i class="fa fa-trash"></i> Supprimer cette news</a></li>
+            <li><a href="/admin/news/edit/{{ $currentNews->id }}"><i class="fa fa-fw fa-pencil"></i> Editer cette news</a></li>
+            <li><a href="/admin/news/destroy/{{ $currentNews->id }}"><i class="fa fa-fw fa-trash"></i> Supprimer cette news</a></li>
             @endif
             <li role="separator" class="divider"></li>
-            <li><a href="/admin/page/create"><i class="fa fa-file"></i> Ajouter une page</a></li>
-            <li><a href="/admin/page/index"><i class="fa fa-cog"></i> Gérer les pages</a></li>
+            <li><a href="/admin/page/create"><i class="fa fa-fw fa-fw fa-file"></i> Ajouter une page</a></li>
+            <li><a href="/admin/page/index"><i class="fa fa-fw fa-cog"></i> Gérer les pages</a></li>
             @if(isset($currentPage))
-            <li><a href="/admin/page/edit/{{ $currentPage->id }}"><i class="fa fa-pencil"></i> Editer cette page</a></li>
-            <li><a href="/admin/page/destroy/{{ $currentPage->id }}"><i class="fa fa-trash"></i> Supprimer cette page</a></li>
+            <li><a href="/admin/page/edit/{{ $currentPage->id }}"><i class="fa fa-fw fa-pencil"></i> Editer cette page</a></li>
+            <li><a href="/admin/page/destroy/{{ $currentPage->id }}"><i class="fa fa-fw fa-trash"></i> Supprimer cette page</a></li>
             @endif
             <li role="separator" class="divider"></li>
-            <li><a href="/admin/trainings/index"><i class="fa fa-graduation-cap"></i> Gérer les promotions</a></li>
+            <li><a href="/admin/training/index"><i class="fa fa-fw fa-graduation-cap"></i> Gérer les promotions</a></li>
           </ul>
         </li>
         @if(isset($currentPage))
-        <li><a href="/admin/page/edit/{{ $currentPage->id }}"><i class="fa fa-pencil"></i></a></li>
+        <li><a href="/admin/page/edit/{{ $currentPage->id }}"><i class="fa fa-fw fa-pencil"></i></a></li>
         <li><a href="/admin/page/destroy/{{ $currentPage->id }}"><i class="fa fa-trash"></i></a></li>
         @endif
         @if(isset($currentNews))
-        <li><a href="/admin/news/edit/{{ $currentNews->id }}"><i class="fa fa-pencil"></i></a></li>
-        <li><a href="/admin/news/destroy/{{ $currentNews->id }}"><i class="fa fa-trash"></i></a></li>
+        <li><a href="/admin/news/edit/{{ $currentNews->id }}"><i class="fa fa-fw fa-pencil"></i></a></li>
+        <li><a href="/admin/news/destroy/{{ $currentNews->id }}"><i class="fa fa-fw fa-trash"></i></a></li>
         @endif
         @endif
         @else
