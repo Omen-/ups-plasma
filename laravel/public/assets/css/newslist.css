@@ -4,6 +4,7 @@
   margin-bottom: 2em;
   max-width:320px;
   max-height: 180px;
+  overflow: hidden;
 }
 
 .news-tile .news-tile-text
@@ -15,8 +16,13 @@
   color:white;
   width: 100%;
   padding: 0 1em;
-  overflow: hidden;
-  text-overflow: clip;
+  max-height: 100%;
+}
+
+.news-tile-text-title
+{
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .news-tile-text-category

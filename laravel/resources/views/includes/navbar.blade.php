@@ -26,7 +26,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->first_name }} <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/calendar"><span class="glyphicon glyphicon glyphicon-calendar"></span> Mon planning</a></li>
-            <li><a href="/profile"><span class="glyphicon glyphicon glyphicon-user"></span> Gérer mon profil</a></li>
+            <li><a href="/profile"><span class="glyphicon glyphicon glyphicon-user"></span> Gérer mon profil (WIP)</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="/logout"><span class="glyphicon glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
           </ul>
@@ -49,7 +49,7 @@
             <li><a href="/admin/page/destroy/{{ $currentPage->id }}"><i class="fa fa-fw fa-trash"></i> Supprimer cette page</a></li>
             @endif
             <li role="separator" class="divider"></li>
-            <li><a href="/admin/training/index"><i class="fa fa-fw fa-graduation-cap"></i> Gérer les promotions</a></li>
+            <li><a href="/admin/training/index"><i class="fa fa-fw fa-graduation-cap"></i> Gérer les promotions (WIP)</a></li>
           </ul>
         </li>
         @if(isset($currentPage))

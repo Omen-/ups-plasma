@@ -12,9 +12,7 @@
       Retrouvez-nous sur les réseaux sociaux<br>
       <br>
       <ul class="list-inline">
-        <li><a href="#" target="_blank"><i class="fa fa-fw fa-2x fa-facebook"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa fa-fw fa-2x fa-twitter"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa fa-fw fa-2x fa-linkedin"></i></a></li>
+        <li><a href="https://twitter.com/master_stp" target="_blank"><i class="fa fa-fw fa-2x fa-twitter"></i></a></li>
       </ul>
     </div>
     <div class="text-footer col-xs-4 text-center">

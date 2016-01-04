@@ -24,11 +24,11 @@
           <div class="btn-group-vertical btn-grp-menu" role="group" aria-label="">
               <button type="button" class="btn btn-menu" data-toggle="collapse" data-target="#presentation">Présentation <span class="caret caret-menu"></span></button>
               <div id="presentation" class="collapse collapsable-menu">
-                <button href="" type="button" class="btn btn-menu-collapse collapsable-menu">Local</button>
-                <button href="" type="button" class="btn btn-menu-collapse collapsable-menu">International</button>
+                <a href="/page/1-local" type="button" class="btn btn-menu-collapse collapsable-menu">Local</a>
+                <a href="/page/2-international" type="button" class="btn btn-menu-collapse collapsable-menu">International</a>
               </div>
-              <a href="" type="button" class="btn btn-menu">Débouchés</a>
-              <a href="" type="button" class="btn btn-menu">Plasma ?</a>
+              <a href="/page/3-plasma" type="button" class="btn btn-menu">Plasma ?</a>
+              <a href="/page/4-debouches" type="button" class="btn btn-menu">Débouchés</a>
               @if(!Auth::check())
               <a href="#" type="button" class="btn btn-menu" data-toggle="modal" data-target="#signup-modal">Inscription</a>
               <a href="#" data-toggle="modal" data-target="#login-modal" type="button" class="btn btn-menu">Connexion</a>
