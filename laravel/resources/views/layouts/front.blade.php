@@ -35,7 +35,15 @@
               @else
               <a href="/news" type="button" class="btn btn-menu">Intranet</a>
               @endif
+              {{-- @if(Auth::check())
+              @if(Auth::user()->isAdmin())
+              <div class="btn-banner">
+                <a type="button" class="btn btn-primary">Changer l'image</a>
+              </div>
+              @endif
+              @endif --}}
           </div>
+
         </div>
       </div>
      </div>

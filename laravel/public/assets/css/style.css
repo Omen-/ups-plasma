@@ -167,3 +167,9 @@ h1, h2, h3, h4, h5, h6
 		max-width: 900px;
 		margin: 0 auto;
 }
+
+.btn-banner
+{
+  padding: 2em 0 0;
+  text-align: center;
+}
