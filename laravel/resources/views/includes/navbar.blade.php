@@ -49,7 +49,7 @@
             <li><a href="/admin/page/destroy/{{ $currentPage->id }}"><i class="fa fa-fw fa-trash"></i> Supprimer cette page</a></li>
             @endif
             <li role="separator" class="divider"></li>
-            <li><a href="/admin/training/index"><i class="fa fa-fw fa-graduation-cap"></i> Gérer les promotions (WIP)</a></li>
+            <li><a href=""><i class="fa fa-fw fa-graduation-cap"></i> Gérer les promotions (WIP)</a></li>
           </ul>
         </li>
         @if(isset($currentPage))

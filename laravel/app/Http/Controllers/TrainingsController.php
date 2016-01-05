@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Training;
 
 class TrainingsController extends Controller
 {
@@ -16,7 +17,7 @@ class TrainingsController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.index.training', ["trainings" => Training::all()]);
     }
 
     /**
