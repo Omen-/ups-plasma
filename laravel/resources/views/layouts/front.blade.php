@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   @include('includes.head')
-  <body>
-    <header class="container">
+  <body class="body">
+    @include('includes.navbar-front')
+    <!--<header class="container">
       <div class="row">
         <div class="col-xs-12">
           <img width="10%" src="assets/img/header_ups.jpeg"></img>
         </div>
       </div>
-    </header>
+    </header>!-->
 
     <section class="container">
       <div class="banner col-md-12">
@@ -20,7 +21,7 @@
             <p class="banner-subtitle">Lorem ipsum dolore sit amet</p>
           </header>
         </div>
-        <div class="col-md-2 col-md-offset-9">
+        <div class="col-md-3 col-md-offset-9">
           <div class="btn-group-vertical btn-grp-menu" role="group" aria-label="">
               <button type="button" class="btn btn-menu" data-toggle="collapse" data-target="#presentation">Présentation <span class="caret caret-menu"></span></button>
               <div id="presentation" class="collapse collapsable-menu">
