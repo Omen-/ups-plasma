@@ -5,6 +5,16 @@ function showPagePreview()
 
 $( document ).ready(function()
 {
+  $("#generatePassword").click(function() {
+      var length = 8,
+          charset = "abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@+-*!",
+          retVal = "";
+      for (var i = 0, n = charset.length; i < length; ++i) {
+          retVal += charset.charAt(Math.floor(Math.random() * n));
+      }
+      $("#user-password").val(retVal);
+  });
+
   tinymce.init({
     plugins: [
         'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',

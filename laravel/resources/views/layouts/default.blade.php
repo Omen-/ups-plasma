@@ -10,6 +10,7 @@
     @yield('content')
     @include('includes.footer')
 
+    @include('includes.modals.confirm-delete')
     <script src="/js/salvattore.min.js"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@
         <div class="panel-title">Pré-inscription administrative</div>
       </div>
       <div class="panel-body">
-          <p>Cette pré-inscription de constitue en rien une inscription officielle à la formation STP. Elle est purement administrative.</p>
+          <p>Cette pré-inscription ne constitue en rien une inscription officielle à la formation STP. Elle est purement administrative.</p>
           <p>Veuillez fournir les fichiers suivents au format PDF : Dernier diplome, Lettre de motivation, Relevé de note de l'année précédente</p>
           <br>
         <form id="signupform" class="form-horizontal dropzone" role="form">
@@ -28,9 +28,12 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="lastname" class="col-md-3 control-label">Fichiers d'inscription</label>
+            <label for="lastname" class="col-md-3 control-label">Fichiers</label>
             <div class="col-md-9">
-              <input name="file" class="form-control" type="file" multiple />
+              <label class="btn btn-default" for="upload-file-selector">
+                <input style="display:none" id="upload-file-selector" name="front-image" type="file" multiple>
+                <i class="fa fa-upload"></i> Choisir les fichiers
+              </label>
             </div>
           </div>
           <div class="form-group">

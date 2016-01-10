@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\Pages\Page;
-use App\Models\Pages\Alias;
+use App\Models\Users\Role;
+use App\Models\Training;
+use App\Models\Users\User;
 
-class PagesController extends Controller
+class StudentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +19,33 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('admin.index.page', ['pages' => Page::all()]);
+      return view('admin.index.student', ["students" => Role::usersof('student'), "trainings" => Training::all()]);
+    }
+
+    public function changeTraining(Request $request)
+    {
+      $rules = array(
+        'promotion' => 'required',
+        'select-students' => 'required'
+      );
+
+      $validator = \Validator::make(\Input::all(), $rules);
+
+      if ($validator->fails())
+      {
+          return redirect()->back()->withErrors($validator);
+      }
+
+      $t = Training::find($request->input('promotion'));
+
+      foreach($request->input('select-students') as $sid)
+      {
+        $s = User::find($sid);
+        $s->trainings()->detach();
+        $s->trainings()->save($t);
+      }
+
+      return redirect()->back();
     }
 
     /**
@@ -27,7 +55,7 @@ class PagesController extends Controller
      */
     public function create()
     {
-      return view('admin.create.page');
+        //
     }
 
     /**
@@ -38,14 +66,7 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
-      if($request->has('title') && $request->has('content'))
-      {
-        $page = new \App\Models\Pages\Page(["title" => $request->input('title'), "content" => $request->input('content')]);
-        $page->save();
-        return redirect('/page/' . $page->id . '-' . ucwords($page->title));
-      }
-      else
-        return redirect('/');
+        //
     }
 
     /**
@@ -56,15 +77,7 @@ class PagesController extends Controller
      */
     public function show($id)
     {
-      return view('pages.page', ['currentPage' => Page::find($id)]);
-    }
-
-    public function alias($title)
-    {
-      $a = Alias::where('alias', $title)->get()->first();
-      if($a)
-        return $this->show($a->page_id);
-      return redirect('/');
+        //
     }
 
     /**
@@ -75,7 +88,7 @@ class PagesController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.edit.page', ['currentEditedPage' => Page::find($id)]);
+        //
     }
 
     /**
@@ -87,16 +100,7 @@ class PagesController extends Controller
      */
     public function update(Request $request, $id)
     {
-      if($request->has('title') && $request->has('content'))
-      {
-        $page = Page::find($id);
-        $page->title = $request->input('title');
-        $page->content = $request->input('content');
-        $page->save();
-        return redirect('/page/' . $page->id . '-' . ucwords($page->title));
-      }
-      else
-        return redirect('/');
+
     }
 
     /**
@@ -107,12 +111,6 @@ class PagesController extends Controller
      */
     public function destroy($id)
     {
-      if(Page::find($id))
-      {
-        $a = Alias::where('page_id', $id)->get()->first();
-        if(!$a)
-          Page::destroy($id);
-      }
-      return \Redirect::back();
+        //
     }
 }

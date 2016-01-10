@@ -16,3 +16,13 @@ function cleanFileName($fileName)
 {
   return preg_replace(array('/\s/', '/\.[\.]+/', '/[^\w_\.\-]/'), array('_', '.', ''), $fileName);
 }
+
+function get_content($key)
+{
+  return \DB::table('content')->where('key', $key)->first()->value;
+}
+
+function set_content($key, $value)
+{
+  return \DB::table('content')->where('key', $key)->update(["value" => $value]);
+}

@@ -16,6 +16,11 @@ class Role extends Model
   {
     return $this->belongsToMany('App\Models\Users\User', 'users_roles_rel');
   }
+
+  public static function usersof($role)
+  {
+    return Role::where("title", "student")->get()->first()->users;
+  }
 }
 
 

@@ -26,14 +26,11 @@ class CreateRoleTable extends Migration
           $table->foreign('role_id')->references('id')->on('users_roles');
       });
 
-      $adminRole = new \App\Models\Users\Role(["title" => "admin"]);
-      $adminRole->save();
-
       $studentRole = new \App\Models\Users\Role(["title" => "student"]);
       $studentRole->save();
 
-      $redactorRole = new \App\Models\Users\Role(["title" => "redactor"]);
-      $redactorRole->save();
+      $adminRole = new \App\Models\Users\Role(["title" => "admin"]);
+      $adminRole->save();
     }
 
     /**

@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\Training;
+use App\Models\Users\User;
+use App\Models\Users\Role;
 
-class TrainingsController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +18,17 @@ class TrainingsController extends Controller
      */
     public function index()
     {
-        return view('admin.index.training', ["trainings" => Training::all()]);
+        return view('admin.index.user', ["users" => User::all(), "roles" => Role::all()]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -29,8 +40,11 @@ class TrainingsController extends Controller
     public function store(Request $request)
     {
       $rules = array(
-        'title' => 'required',
-        'calendar' => 'required',
+        'role' => 'required',
+        'email' => 'required|email',
+        'password' => 'required',
+        'lastname' => 'required',
+        'firstname' => 'required',
       );
 
       $validator = \Validator::make(\Input::all(), $rules);
@@ -40,7 +54,10 @@ class TrainingsController extends Controller
           return redirect()->back()->withInput()->withErrors($validator);
       }
 
-      (new \App\Models\Training(["title" => $request->input('title'), "calendar_id" => $request->input('calendar')]))->save();
+      $user = new User(["email" => $request->input('email'), "last_name" => $request->input('lastname'), "first_name" => $request->input('firstname')]);
+      $user->password = \Hash::make($request->input('password'));
+      $user->save();
+      $user->roles()->save(Role::find($request->input('role')));
 
       return redirect()->back();
     }
@@ -64,7 +81,7 @@ class TrainingsController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.edit.training', ['currentEditedTraining' => Training::find($id)]);
+        return view('admin.edit.user', ['currentEditedUser' => User::find($id), "roles" => Role::all()]);
     }
 
     /**
@@ -77,8 +94,11 @@ class TrainingsController extends Controller
     public function update(Request $request, $id)
     {
       $rules = array(
-        'title' => 'required',
-        'calendar' => 'required',
+        'role' => 'required',
+        'email' => 'required|email',
+        'password' => '',
+        'lastname' => 'required',
+        'firstname' => 'required',
       );
 
       $validator = \Validator::make(\Input::all(), $rules);
@@ -88,18 +108,23 @@ class TrainingsController extends Controller
           return redirect()->back()->withInput()->withErrors($validator);
       }
 
-      if(!Training::find($id))
+      $user = User::find($id);
+
+      if($request->has('password'))
       {
-        return redirect()->back()->withInput()->withErrors(['News introuvable']);
+        $user->password = bcrypt($request->input('password'));
       }
 
-      $t = Training::find($id);
+      $user->email = $request->input('email');
+      $user->last_name = $request->input('lastname');
+      $user->first_name = $request->input('firstname');
 
-      $t->title = $request->input('title');
-      $t->calendar_id = $request->input('calendar');
-      $t->save();
+      $user->roles()->detach();
+      $user->roles()->save(Role::find($request->input('role')));
 
-      return redirect('/admin/training/index');
+      $user->save();
+
+      return redirect()->back();
     }
 
     /**
@@ -110,7 +135,9 @@ class TrainingsController extends Controller
      */
     public function destroy($id)
     {
-      Training::destroy($id);
+      User::find($id)->roles()->detach();
+      User::destroy($id);
+
       return \Redirect::back();
     }
 }

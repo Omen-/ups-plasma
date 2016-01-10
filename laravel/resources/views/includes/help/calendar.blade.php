@@ -1,0 +1,1 @@
+<p>Les calendriers sont au format google calendar, pour pouvoir partager un calendrier, vous devez premièrement <a target="_blank" href="https://www.youtube.com/watch?v=XJncJK1OVWM">créer un calendrier publique</a>, puis <a target="_blank" href="https://www.youtube.com/watch?v=m_ph_hYT_SY">récuperer son ID</a>.</p>

@@ -54,9 +54,25 @@ Route::group(['middleware' => ['auth', 'admin']], function()
   Route::get('/admin/news/destroy/{id}', 'NewsController@destroy');
 
   Route::get('/admin/training/index', 'TrainingsController@index');
+  Route::post('/admin/training/store', 'TrainingsController@store');
+  Route::get('/admin/training/edit/{id}', 'TrainingsController@edit');
+  Route::post('/admin/training/update/{id}', 'TrainingsController@update');
+  Route::get('/admin/training/destroy/{id}', 'TrainingsController@destroy');
+
+  Route::get('/admin/user/index', 'UsersController@index');
+  Route::post('/admin/user/store', 'UsersController@store');
+  Route::get('/admin/user/edit/{id}', 'UsersController@edit');
+  Route::post('/admin/user/update/{id}', 'UsersController@update');
+  Route::get('/admin/user/destroy/{id}', 'UsersController@destroy');
+
+  Route::get('/admin/student/index', 'StudentsController@index');
+  Route::post('/admin/student/update', 'StudentsController@changeTraining');
+
+  Route::get('/admin/content/index', 'EditableContentController@index');
+  Route::post('/admin/content/store', 'EditableContentController@store');
 });
 
 Route::get('/page/{id}-{title}', 'PagesController@show');
-
+Route::get('/a/{title}', 'PagesController@alias');
 Route::get('/news/{id}-{title}', 'NewsController@show');
 Route::get('/news', 'NewsController@all');

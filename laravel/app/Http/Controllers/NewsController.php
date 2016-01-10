@@ -58,7 +58,7 @@ class NewsController extends Controller
       return redirect()->back()->withInput()->withErrors([trans('news.category')]);
     }
 
-    $this->saveNewsImage($request->file('image'));
+    $newFilename = $this->saveNewsImage($request->file('image'));
 
     $news = new \App\Models\News\News(["title" => $request->input('title'), "content" => $request->input('content'), "author_id" => \Auth::user()->id, "image" => $newFilename]);
     $news->save();

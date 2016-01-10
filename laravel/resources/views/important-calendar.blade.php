@@ -18,11 +18,10 @@
 <div class="container content-section">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-			@foreach($trainings as $t)
-			<h1 class="page-header">Calendrier de la promotion "{{ $t->title }}"</h1>
-			<div class="calendar-container" id='calendar-{{ $t->id }}'></div>
-			<script>loadCalendar('{{ $t->calendar_id }}','calendar-{{ $t->id }}')</script>
-			@endforeach
+      <h1 class="page-header">Dates importantes</h1>
+			<div class="calendar-container" id='calendar-i'></div>
+			<script>loadCalendar('{{ get_content('calendar.important') }}','calendar-i')</script>
+
     </div>
   </div>
 </div>
