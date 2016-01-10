@@ -16,7 +16,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informations <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/about"><i class="fa fa-fw fa-file-pdf-o"></i> Présentation du parcours</a></li>
-            <li><a href="/important-calendar"><span class="glyphicon glyphicon glyphicon-calendar"></span> Dates importantes</a></li>
+            <li><a href="/icalendar"><span class="glyphicon glyphicon glyphicon-calendar"></span> Dates importantes</a></li>
           </ul>
         </li>
       </ul>
