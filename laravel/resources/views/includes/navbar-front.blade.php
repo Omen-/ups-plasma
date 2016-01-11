@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Science et Technologies des Plasmas</a>
+      <a class="navbar-brand" href="/">{{ get_content('front.title') }}</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
     </div>

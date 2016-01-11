@@ -33,8 +33,8 @@
             @if($s->hasRole('student') && $s->trainings->isEmpty())
               <tr>
                 <th class="vertical-align-middle" scope="row"><input type="checkbox" name="select-students[]" value="{{ $s->id }}" /></th>
-                <td class="vertical-align-middle">{{ $s->first_name }}</td>
                 <td class="vertical-align-middle">{{ $s->last_name }}</td>
+                <td class="vertical-align-middle">{{ $s->first_name }}</td>
                 <td class="vertical-align-middle"><a href="mailto:{{ $s->email }}">{{ $s->email }}</a></td>
               </tr>
             @endif
@@ -54,8 +54,8 @@
             @if($s->hasRole('student'))
             <tr>
               <th class="vertical-align-middle" scope="row"><input type="checkbox" name="select-students[]" value="{{ $s->id }}" /></th>
-              <td class="vertical-align-middle">{{ $s->first_name }}</td>
               <td class="vertical-align-middle">{{ $s->last_name }}</td>
+              <td class="vertical-align-middle">{{ $s->first_name }}</td>
               <td class="vertical-align-middle"><a href="mailto:{{ $s->email }}">{{ $s->email }}</a></td>
             </tr>
             @endif

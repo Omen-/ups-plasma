@@ -6,7 +6,6 @@
         9 Rue Pierre de Ronsard<br>
         31400 TOULOUSE<br>
       </adress>
-      <i class="fa fa-phone"></i>&nbsp;<a href="tel:+33659979513">0659979513</a>
     </div>
     <div class="text-footer col-xs-4 text-center">
       Retrouvez-nous sur les réseaux sociaux<br>

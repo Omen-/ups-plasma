@@ -33,10 +33,6 @@
               <label for="banner-title">Titre</label>
               <input type="banner-title" value="{{ get_content('front.title') }}" name="front-title" class="form-control" id="banner-title">
             </div>
-            <div class="form-group">
-              <label for="banner-subtitle">Sous-Titre</label>
-              <input type="banner-subtitle" value="{{ get_content('front.subtitle') }}" name="front-subtitle" class="form-control" id="banner-subtitle">
-            </div>
             <button type="submit" class="btn btn-success">Mettre à jour</button>
             <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
           </form>

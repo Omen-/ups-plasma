@@ -61,7 +61,7 @@ class SessionsController extends Controller
         return redirect()->back()->withInput($request->except('password'))->withErrors(['login' => 'Echec d\'authentification']);
       }
 
-      return Redirect::back();
+      return redirect('/news');
     }
 
     /**

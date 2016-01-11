@@ -60,7 +60,7 @@ class StudentApplicationController extends Controller
         return redirect()->back()->withInput()->withErrors($validator);
       }
 
-      $application = new StudentApplication(["email" => $request->input('email'), "firstname" => $request->input('firstname'), "lastname" => $request->input('lastname')]);
+      $application = new StudentApplication(["email" => $request->input('email'), "first_name" => $request->input('firstname'), "last_name" => $request->input('lastname')]);
       $application->save();
 
       foreach($request->file('pdfs') as $file)

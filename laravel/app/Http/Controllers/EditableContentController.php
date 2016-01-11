@@ -24,9 +24,9 @@ class EditableContentController extends Controller
       );
 
       $validator = \Validator::make(\Input::all(), $rules);
-
       if ($validator->fails())
       {
+
           return redirect()->back()->withErrors($validator);
       }
 
