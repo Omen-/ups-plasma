@@ -136,6 +136,7 @@ class UsersController extends Controller
     public function destroy($id)
     {
       User::find($id)->roles()->detach();
+      User::find($id)->trainings()->detach();
       User::destroy($id);
 
       return \Redirect::back();

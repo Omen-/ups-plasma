@@ -71,6 +71,8 @@ Route::group(['middleware' => ['auth', 'admin']], function()
 
   Route::get('/admin/content/index', 'EditableContentController@index');
   Route::post('/admin/content/store', 'EditableContentController@store');
+
+  Route::post('/ajax/image/store', 'EditableContentController@storeImage');
 });
 
 Route::get('/page/{id}-{title}', 'PagesController@show');

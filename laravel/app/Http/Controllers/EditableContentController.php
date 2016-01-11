@@ -14,6 +14,24 @@ class EditableContentController extends Controller
       return view('admin.index.content');
     }
 
+    public function storeImage(Request $request)
+    {
+      $rules = array(
+        'front-image' => 'image|mimes:jpeg,jpg,png,bmp,gif,svg',
+        'front-title' => '',
+        'front-subtitle' => '',
+        'calendar-important' => '',
+      );
+
+      $validator = \Validator::make(\Input::all(), $rules);
+      if ($validator->fails())
+      {
+          return;
+      }
+      dd(\Input::all());
+      return response()->json(['location' => 'Abigail']);
+    }
+
     public function store(Request $request)
     {
       $rules = array(
@@ -26,7 +44,6 @@ class EditableContentController extends Controller
       $validator = \Validator::make(\Input::all(), $rules);
       if ($validator->fails())
       {
-
           return redirect()->back()->withErrors($validator);
       }
 
