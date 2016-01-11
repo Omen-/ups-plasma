@@ -8,7 +8,7 @@
 @section('content')
 <section class="content-section container">
   <div class="row">
-    <div class="col-md-offset-2 col-xs-8">
+    <div class="col-xs-offset-2 col-xs-8">
       <h1 class="page-header">Gestion des pages</h1>
       <br>
       <table class="table">

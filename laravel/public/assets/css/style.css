@@ -41,15 +41,61 @@ h1, h2, h3, h4, h5, h6
   width: 100%;
 }
 
-.fix-right-padding
+@media only screen and (min-width : 992px)
 {
-  padding-right: 0;
+  .collapsable-menu-container
+  {
+    width:100%;
+    margin-top: -0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+
+  .fix-right-padding
+  {
+    padding-right: 0;
+  }
+
+  .fix-left-padding
+  {
+    padding-left: 0;
+  }
+
+  .btn-menu-container-left
+  {
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+  }
 }
 
-.fix-left-padding
+@media only screen and (max-width : 992px)
 {
-  padding-left: 0;
+  .collapsable-menu-container
+  {
+    width:100%;
+    margin-top: -0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .btn-menu-container-left
+  {
+    padding-bottom: 0.5em;
+    padding-right: 0;
+  }
+
+  .btn-menu-collapse
+  {
+    padding: 0;
+  }
 }
+
+.btn-menu-container-right
+{
+  padding-bottom: 0.5em;
+}
+
+
 
 .content-section
 {
@@ -70,17 +116,6 @@ h1, h2, h3, h4, h5, h6
   margin: 5px;
   background-color: #3d7ec0;
   color: white;
-}
-
-.btn-menu-container-left
-{
-  padding-bottom: 0.5em;
-  padding-right: 0.5em;
-}
-
-.btn-menu-container-right
-{
-  padding-bottom: 0.5em;
 }
 
 .btn-menu-container-midle
@@ -118,14 +153,6 @@ h1, h2, h3, h4, h5, h6
 .collapsable-menu
 {
   width:100%;
-}
-
-.collapsable-menu-container
-{
-  width:100%;
-  margin-top: -0.5em;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
 }
 
 .caret-menu

@@ -26,6 +26,7 @@ $( document ).ready(function()
         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
         'save table contextmenu directionality emoticons template paste textcolor'
       ],
+       automatic_uploads: true,
     images_upload_url: '/ajax/image/store',
     selector: 'textarea#editor',
     content_css : ['/assets/css/bootstrap.min.css', '/assets/css/style.css', '/assets/css/style-default.css'],
