@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="container-fluid">
+  <div class="container-fluid footer-container">
     <div class="text-footer col-xs-4 text-center">
       <address>
         Master STP<br>

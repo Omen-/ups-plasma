@@ -216,14 +216,19 @@ h1, h2, h3, h4, h5, h6
   text-align: left;
 }
 
+.footer-container
+{
+  background-color: #3d7ec0;
+}
+
 .footer
 {
+  background-color: #3d7ec0;
   position: absolute;
   //bottom: -28px;
   bottom: 0px;
   width: 100%;
   height: 160px;
-  background-color: #3d7ec0;
   border-top: 1px solid #e5e5e5;
   color: white;
 }
