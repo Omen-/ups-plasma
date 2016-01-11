@@ -1,7 +1,7 @@
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog">
     <div class="loginmodal-container">
-      @if ($errors->any())
+      @if ($errors->any() && $errors->has('login'))
       <div class="alert alert-danger" role="alert">
         {!! implode('', $errors->all('<p><i class="fa fa-exclamation-circle"></i> :message</p>')) !!}
       </div>
@@ -21,7 +21,7 @@
   </div>
 </div>
 
-@if($errors->any())
+@if($errors->any() && $errors->has('login'))
 <script type="text/javascript">
     $(window).load(function(){
         $('#login-modal').modal('show');

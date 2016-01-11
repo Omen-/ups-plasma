@@ -49,7 +49,8 @@ class SessionsController extends Controller
 
       if ($validator->fails())
       {
-          return redirect()->back()->withInput($request->except('password'))->withErrors($validator);
+        $validator->getMessageBag()->add('login', 'Echec d\'authentification');
+        return redirect()->back()->withInput($request->except('password'))->withErrors($validator);
       }
 
       if(!Auth::attempt([
@@ -57,7 +58,7 @@ class SessionsController extends Controller
         'password' => $request->input('password')
       ]))
       {
-        return redirect()->back()->withInput($request->except('password'))->withErrors(['Echec d\'authentification']);
+        return redirect()->back()->withInput($request->except('password'))->withErrors(['login' => 'Echec d\'authentification']);
       }
 
       return Redirect::back();

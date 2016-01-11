@@ -28,6 +28,7 @@ Route::group(['middleware' => ['guest']], function()
 {
   Route::get('login', 'SessionsController@create');
   Route::post('login', 'SessionsController@store');
+  Route::post('/student-application/store', 'StudentApplicationController@store');
 });
 
 Route::group(['middleware' => ['auth']], function()

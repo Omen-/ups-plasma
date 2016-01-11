@@ -14,7 +14,7 @@ class Category extends Model
 
   public function news()
   {
-    return $this->belongsToMany('App\Models\News\Category', 'news_category_rel');
+    return $this->belongsToMany('App\Models\News\News', 'news_category_rel');
   }
 }
 
