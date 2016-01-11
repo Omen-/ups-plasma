@@ -32,7 +32,7 @@ class EditableContentController extends Controller
 
       if($request->hasFile('front-image'))
       {
-        $destinationPath = public_path('assets\\img\\banner.png');
+        $destinationPath = public_path('assets/img/banner.png');
         $uploadSuccess = \Image::make($request->file('front-image')->getRealPath())->save($destinationPath);
       }
 
