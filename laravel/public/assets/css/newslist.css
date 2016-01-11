@@ -1,5 +1,6 @@
 .news-tile
 {
+  margin: 0 auto;
   position:relative;
   margin-bottom: 2em;
   max-width:320px;
