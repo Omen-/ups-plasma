@@ -24,9 +24,9 @@
           <td class="vertical-align-middle">{{ $page->title }}</td>
           <td class="vertical-align-middle">{{ $page->updated_at }}</td>
           <td>
-            <a class="btn btn-success" href="/page/{{ $page->id . '-' . sluggify($page->title) }}"><i class="fa fa-eye"></i></a>
-            <a class="btn btn-primary" href="/admin/page/edit/{{ $page->id }}"><i class="fa fa-pencil"></i></a>
-            <a class="btn btn-danger" data-confirm="la page {{ $page->title }}" href="/admin/page/destroy/{{ $page->id }}"><i class="fa fa-trash"></i></a>
+            <a class="btn btn-success" href="/page/{{ $page->id . '-' . sluggify($page->title) }}"><i class="fa fa-fw fa-eye"></i></a>
+            <a class="btn btn-primary" href="/admin/page/edit/{{ $page->id }}"><i class="fa fa-fw fa-pencil"></i></a>
+            <a class="btn btn-danger" data-confirm="la page {{ $page->title }}" href="/admin/page/destroy/{{ $page->id }}"><i class="fa fa-fw fa-trash"></i></a>
           </td>
         </tr>
         @endforeach

@@ -42,7 +42,7 @@ class PagesController extends Controller
       {
         $page = new \App\Models\Pages\Page(["title" => $request->input('title'), "content" => $request->input('content')]);
         $page->save();
-        return redirect('/page/' . $page->id . '-' . ucwords($page->title));
+        return redirect('/page/' . $page->id . '-' . sluggify($page->title));
       }
       else
         return redirect('/');
@@ -93,7 +93,7 @@ class PagesController extends Controller
         $page->title = $request->input('title');
         $page->content = $request->input('content');
         $page->save();
-        return redirect('/page/' . $page->id . '-' . ucwords($page->title));
+        return redirect('/page/' . $page->id . '-' . sluggify($page->title));
       }
       else
         return redirect('/');

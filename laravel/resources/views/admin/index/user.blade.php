@@ -27,8 +27,8 @@
               <td class="vertical-align-middle"><a href="mailto:{{ $u->email }}">{{ $u->email }}</a></td>
               <td class="vertical-align-middle">{{ $u->roles()->first()->title }}</td>
               <td>
-                <a class="btn btn-primary" href="/admin/user/edit/{{ $u->id }}"><i class="fa fa-pencil"></i></a>
-                <a class="btn btn-danger" data-confirm="l'utilisateur {{ $u->first_name . ' ' . $u->last_name }}" href="/admin/user/destroy/{{ $u->id }}"><i class="fa fa-trash"></i></a>
+                <a class="btn btn-primary" href="/admin/user/edit/{{ $u->id }}"><i class="fa fa-fw fa-pencil"></i></a>
+                <a class="btn btn-danger" data-confirm="l'utilisateur {{ $u->first_name . ' ' . $u->last_name }}" href="/admin/user/destroy/{{ $u->id }}"><i class="fa fa-fw fa-trash"></i></a>
               </td>
             </tr>
             @endforeach

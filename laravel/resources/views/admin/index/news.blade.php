@@ -29,9 +29,9 @@
           <td class="vertical-align-middle">{{ $n->categories->first()->title }}</td>
           <td class="vertical-align-middle">{{ $n->updated_at }}</td>
           <td>
-            <a class="btn btn-success" href="{{ '/news/' .$n->id . '-' . sluggify($n->title) }}"><i class="fa fa-eye"></i></a>
-            <a class="btn btn-primary" href="/admin/news/edit/{{ $n->id }}"><i class="fa fa-pencil"></i></a>
-            <a class="btn btn-danger" data-confirm="la news {{ $n->title }}" href="/admin/news/destroy/{{ $n->id }}"><i class="fa fa-trash"></i></a>
+            <a class="btn btn-success" href="{{ '/news/' .$n->id . '-' . sluggify($n->title) }}"><i class="fa fa-fw fa-eye"></i></a>
+            <a class="btn btn-primary" href="/admin/news/edit/{{ $n->id }}"><i class="fa fa-fw fa-pencil"></i></a>
+            <a class="btn btn-danger" data-confirm="la news {{ $n->title }}" href="/admin/news/destroy/{{ $n->id }}"><i class="fa fa-fw fa-trash"></i></a>
           </td>
         </tr>
         @endforeach

@@ -27,8 +27,8 @@
               <td class="vertical-align-middle">{{ $t->title }}</td>
               <td class="vertical-align-middle">{{ $t->users()->count() }}</td>
               <td>
-                <a class="btn btn-primary" href="/admin/training/edit/{{ $t->id }}"><i class="fa fa-pencil"></i></a>
-                <a class="btn btn-danger" data-confirm="la promotion {{ $t->title }}" href="/admin/training/destroy/{{ $t->id }}"><i class="fa fa-trash"></i></a>
+                <a class="btn btn-primary" href="/admin/training/edit/{{ $t->id }}"><i class="fa fa-fw fa-pencil"></i></a>
+                <a class="btn btn-danger" data-confirm="la promotion {{ $t->title }}" href="/admin/training/destroy/{{ $t->id }}"><i class="fa fa-fw fa-trash"></i></a>
 
               </td>
             </tr>
