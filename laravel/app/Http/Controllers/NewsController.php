@@ -120,14 +120,14 @@ class NewsController extends Controller
   private function saveNewsImage($file)
   {
     $newFilename = uniqid() . cleanFileName($file->getClientOriginalName());
-    $destinationPath = public_path('assets\\img\\news\\');
+    $destinationPath = public_path('assets/img/news/');
     $uploadSuccess = \Image::make($file->getRealPath())->fit(320, 180)->save($destinationPath . $newFilename);
     return $newFilename;
   }
 
   private function updateNewsImage($file, $name)
   {
-    $destinationPath = public_path('assets\\img\\news\\');
+    $destinationPath = public_path('assets/img/news/');
     $uploadSuccess = \Image::make($file->getRealPath())->fit(320, 180)->save($destinationPath . $name);
     return $name;
   }
