@@ -16,7 +16,7 @@
     <div class="news-title-separator"></div>
   </div>
   <div class="row">
-    <div class="col-xs-offset-2 col-xs-8">
+    <div class="col-md-offset-2 col-md-8 col-xs-12">
       <div class="news-content">
         {!! $currentNews->content !!}
         <p class="news-author">{{ $currentNews->author->first_name . ' ' . $currentNews->author->last_name }}</p>
