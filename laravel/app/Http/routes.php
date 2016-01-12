@@ -72,6 +72,9 @@ Route::group(['middleware' => ['auth', 'admin']], function()
   Route::get('/admin/content/index', 'EditableContentController@index');
   Route::post('/admin/content/store', 'EditableContentController@store');
 
+  Route::get('/admin/student-app/index', 'StudentApplicationController@index');
+  Route::get('/admin/stored-pdf/show/{id}', 'StoredPdfController@show');
+
   Route::post('/ajax/image/store', 'EditableContentController@storeImage');
 });
 
@@ -80,3 +83,4 @@ Route::get('/a/{title}', 'PagesController@alias');
 Route::get('/news/{id}-{title}', 'NewsController@show');
 Route::get('/news', 'NewsController@all');
 Route::get('/icalendar', function() { return view('important-calendar'); });
+Route::get('/raw-calendar', 'CalendarController@show');

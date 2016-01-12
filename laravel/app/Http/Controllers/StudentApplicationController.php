@@ -18,7 +18,7 @@ class StudentApplicationController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.index.application', ["applications" => StudentApplication::all()]);
     }
 
     /**

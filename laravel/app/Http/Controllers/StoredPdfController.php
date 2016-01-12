@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Application\StoredPdf;
 
 class StoredPdfController extends Controller
 {
@@ -37,7 +38,7 @@ class StoredPdfController extends Controller
      */
     public function store(Request $request)
     {
-      
+
     }
 
     /**
@@ -48,7 +49,15 @@ class StoredPdfController extends Controller
      */
     public function show($id)
     {
-        //
+      $pdf = StoredPdf::find($id);
+      if($pdf)
+      {
+        return \Response::make(\Storage::disk('local')->get($pdf->id . '.pdf'), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; ' . $pdf->title,
+          ]);
+      }
+      return redirect()->back();
     }
 
     /**

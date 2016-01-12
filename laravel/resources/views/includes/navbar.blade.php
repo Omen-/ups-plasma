@@ -48,6 +48,8 @@
             <li><a href="/admin/page/destroy/{{ $currentPage->id }}"><i class="fa fa-fw fa-trash"></i> Supprimer cette page</a></li>
             @endif
             <li role="separator" class="divider"></li>
+            <li><a href="/admin/student-app/index"><i class="fa fa-fw fa-user"></i> Gérer les pré-inscriptions</a></li>
+            <li role="separator" class="divider"></li>
             <li><a href="/admin/user/index"><i class="fa fa-fw fa-user"></i> Gérer les utilisateurs</a></li>
             <li><a href="/admin/training/index"><i class="fa fa-fw fa-graduation-cap"></i> Gérer les promotions</a></li>
             <li><a href="/admin/student/index"><i class="fa fa-fw fa-users"></i> Gérer les étudiants</a></li>
