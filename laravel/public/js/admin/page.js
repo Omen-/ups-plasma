@@ -3,6 +3,13 @@ function showPagePreview()
   $('#preview').html(tinyMCE.get('editor').getContent());
 }
 
+function showNewsPreview()
+{
+  $('#title-preview').show();
+  $('#news-preview-title').text($('#input-title').val());
+  $('#preview').html(tinyMCE.get('editor').getContent());
+}
+
 $( document ).ready(function()
 {
   $("#generatePassword").click(function() {

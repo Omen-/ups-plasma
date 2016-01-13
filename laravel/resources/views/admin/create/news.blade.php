@@ -5,6 +5,10 @@
 <script src="/js/admin/page.js"></script>
 @stop
 
+@section('css')
+<link href="/assets/css/news.css" rel="stylesheet"></link>
+@stop
+
 @section('content')
 <section class="content-section container">
   <div class="row">
@@ -18,8 +22,8 @@
 
       <form method="post" action="/admin/news/store" enctype="multipart/form-data">
         <div class="form-group">
-          <label for="title">Titre de la news</label>
-          <input type="text" name="title" class="form-control" id="title" placeholder="Titre" value="{{Request::old('title')}}">
+          <label for="input-title">Titre de la news</label>
+          <input type="text" name="title" class="form-control" id="input-title" placeholder="Titre" value="{{Request::old('title')}}">
         </div>
         <div class="form-group">
           <label class="control-label">Image de la news</label>
@@ -45,7 +49,7 @@
         </div>
         <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
         <div class="form-group">
-          <a onclick="showPagePreview()" class="btn btn-primary"><i class="fa fa-eye"></i> Preview</a>
+          <a onclick="showNewsPreview()" class="btn btn-primary"><i class="fa fa-eye"></i> Preview</a>
           <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i> Save</button>
         </div>
       </form>
@@ -54,9 +58,18 @@
 
 </section>
 <br>
-<section class="content-section container">
+<section id="news-preview" class="container news-container content-section">
   <div class="row">
-    <div id="preview" class="col-md-offset-2 col-xs-8">
+    <h2 id="news-preview-title" class="news-title"></h2>
+    <div class="news-title-separator"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8 col-xs-12">
+      <div class="news-content">
+        <div id="preview">
+        </div>
+        <p class="news-author">{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}</p>
+      </div>
     </div>
   </div>
 </section>
