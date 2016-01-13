@@ -45,7 +45,7 @@
     @include('includes.modals.login')
     @include('includes.modals.signup')
     @endif
-    <div class="news-title">
+    <div class="news-title-front">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">

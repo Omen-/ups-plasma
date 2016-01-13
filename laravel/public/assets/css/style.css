@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6
   color: white;
 }
 
-.news-title
+.news-title-front
 {
   padding: 1em 0;
   background-color: #3d7ec0;
@@ -222,7 +222,7 @@ h1, h2, h3, h4, h5, h6
 
 }
 
-.news-title h2
+.news-title-front h2
 {
   margin-top: 0;
   margin-bottom: 0;
