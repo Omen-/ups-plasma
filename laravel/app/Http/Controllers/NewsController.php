@@ -121,14 +121,14 @@ class NewsController extends Controller
   {
     $newFilename = uniqid() . cleanFileName($file->getClientOriginalName());
     $destinationPath = public_path('assets/img/news/');
-    $uploadSuccess = \Image::make($file->getRealPath())->fit(320, 180)->save($destinationPath . $newFilename);
+    $uploadSuccess = \Image::make($file->getRealPath())->fit(640, 360)->save($destinationPath . $newFilename);
     return $newFilename;
   }
 
   private function updateNewsImage($file, $name)
   {
     $destinationPath = public_path('assets/img/news/');
-    $uploadSuccess = \Image::make($file->getRealPath())->fit(320, 180)->save($destinationPath . $name);
+    $uploadSuccess = \Image::make($file->getRealPath())->fit(640, 360)->save($destinationPath . $name);
     return $name;
   }
 }
