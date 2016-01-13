@@ -13,4 +13,9 @@ class CalendarController extends Controller
   {
     return view('calendar', ['trainings' => \Auth::user()->trainings]);
   }
+
+  public function show()
+  {
+    return view('custom-calendar');
+  }
 }

@@ -10,6 +10,7 @@
   <link href="/assets/css/navbar.css" rel="stylesheet"></link>
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,600' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/overlay.css" rel="stylesheet"></link>
   @if(!Auth::check())
   <link href="/assets/css/login.css" rel="stylesheet"></link>
   @endif

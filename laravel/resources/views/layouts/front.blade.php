@@ -4,61 +4,57 @@
   <body class="body">
     @include('includes.navbar-front')
 
-    <section class="container">
+
+
+    <section class="container-fluid">
       <div class="row">
-        <div class="banner col-md-12">
-          <img class="img-responsive" src="/assets/img/banner.png"></img>
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="/assets/img/banner.png" alt="" class="img-responsive">
+              <div class="carousel-caption">
+                <h1>Science et technologie des plasmas</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-     </div>
     </section>
+
+    <div class="container-fluid">
+      <div class="row logo-container">
+        <div class="col-lg-2 col-md-4 col-lg-offset-1">
+          <img class="img-responsive" src="/assets/img/logo/ups.jpg" />
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <img class="img-responsive" src="/assets/img/logo/inrs.jpg" />
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <img class="img-responsive" src="/assets/img/logo/sherbrooke.svg" />
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <img class="img-responsive" src="/assets/img/logo/montreal.png" />
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <img class="img-responsive" src="/assets/img/logo/laval.jpg" />
+        </div>
+      </div>
+    </div>
 
     @if(!Auth::check())
     @include('includes.modals.login')
     @include('includes.modals.signup')
     @endif
-    <section class="container">
-      <div class="row">
-        <div class="btn-grp-menu-big">
-          <div class="col-md-6 fix-right-padding">
-            <div class="btn-group-vertical btn-grp-menu " role="group" aria-label="">
-                <div class="btn-menu-container-left">
-                  <button type="button" class="btn btn-menu" data-toggle="collapse" data-target="#presentation">Présentation <span class="caret caret-menu"></span></button>
-                </div>
-                <div id="presentation" class="collapse collapsable-menu-container">
-                  <a href="/a/presentation-local" type="button" class="btn btn-menu-collapse collapsable-menu">Local</a>
-                  <a href="/a/presentation-international" type="button" class="btn btn-menu-collapse collapsable-menu">International</a>
-                </div>
-                <div class="btn-menu-container-left">
-                  <a href="/a/plasma" type="button" class="btn btn-menu">Plasma ?</a>
-                </div>
-            </div>
+    <div class="news-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>News</h2>
           </div>
-          <div class="col-md-6 fix-left-padding">
-            <div class="btn-group-vertical btn-grp-menu" role="group" aria-label="">
-              <div class="btn-menu-container-right">
-                <a href="/a/debouches" type="button" class="btn btn-menu">Débouchés</a>
-              </div>
-                @if(!Auth::check())
-                <div class="btn-menu-container-right">
-                  <a href="#" type="button" class="btn btn-menu" data-toggle="modal" data-target="#signup-modal">Inscription</a>
-                </div>
-                @else
-                <div class="btn-menu-container-right">
-                  <a href="/news" type="button" class="btn btn-menu">Intranet</a>
-                </div>
-                @endif
-            </div>
-          </div>
-          @if(!Auth::check())
-          <div class="col-md-12">
-            <div class="btn-group-vertical btn-grp-menu btn-menu-container-midle" role="group" aria-label="">
-              <a href="#" data-toggle="modal" data-target="#login-modal" type="button" class="btn btn-menu">Connexion</a>
-            </div>
-          </div>
-          @endif
         </div>
       </div>
+    </div>
+    <section class="container">
       @yield('content')
     </section>
 

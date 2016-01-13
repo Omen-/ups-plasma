@@ -1,0 +1,30 @@
+.overlay-box
+{
+  min-height: 180px;
+  box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+  margin:5% auto 0 auto;
+  background-size:cover;
+  background-position: center center;
+  overflow:hidden;
+}
+
+.overlay
+{
+  padding:90px 0 90px 0;
+  background:rgba(0,0,0,.75);
+  text-align:center;
+  opacity:0;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+}
+
+.overlay-box:hover .overlay
+{
+  opacity: 1;
+}
+
+.overlay-text
+{
+
+}
