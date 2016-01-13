@@ -33,9 +33,7 @@
               </li>
               @else
               <li>
-                <div class="btn-menu-container-right">
-                  <a href="/news" type="button" class="btn btn-menu">Intranet</a>
-                </div>
+                <a href="/news">Intranet</a>
               </li>
               @endif
             </ul>
