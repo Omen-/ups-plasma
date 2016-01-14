@@ -7,17 +7,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Master STP</a>
+      <a class="navbar-brand" href="/">Science et technologie des plasmas</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="{{ Request::is('news') ? 'active' : '' }}"><a href="/news/">News</a></li>
+        <li class="{{ Request::is('news') ? 'active' : '' }}"><a href="/news">News</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informations <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Présentation <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/about"><i class="fa fa-fw fa-file-pdf-o"></i> Présentation du parcours</a></li>
-            <li><a href="/icalendar"><span class="glyphicon glyphicon glyphicon-calendar"></span> Dates importantes</a></li>
+            <li><a href="/a/presentation-local"><i class="fa fa-fw fa-map-marker"></i> Local</a></li>
+            <li><a href="/a/presentation-international"><i class="fa fa-fw fa-globe"></i> International</a></li>
           </ul>
+        </li>
+        <li>
+          <a href="/a/plasma">Plasma ?</a>
+        </li>
+        <li>
+          <a href="/a/debouches">Débouchés</a>
+        </li>
+        <li>
+          <a target="_blank" href="/about">Plaquette</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

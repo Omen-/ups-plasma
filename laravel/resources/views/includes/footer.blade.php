@@ -3,8 +3,9 @@
     <div class="text-footer col-xs-4 text-center">
       <address>
         Master STP<br>
-        9 Rue Pierre de Ronsard<br>
-        31400 TOULOUSE<br>
+        Université Paul Sabatier<br>
+        Bat. 3R3, 118 Route de Narobonne<br>
+        31062 TOULOUSE Cedex 9<br>
       </adress>
     </div>
     <div class="text-footer col-xs-4 text-center">
@@ -15,9 +16,9 @@
       </ul>
     </div>
     <div class="text-footer col-xs-4 text-center">
-      <br>
       <p>© 2015 Master STP, tous droits réservés</p>
-      <p>Site réalisé par <a href="http://upsilon-toulouse.fr/"><u>UPSILON</u></a></p>
+      <p>Avec le soutien de l'IDEX de toulouse</p>
+      <p class="upsilon-container">Site réalisé par <a href="http://upsilon-toulouse.fr/" target="_blank"><img class="logo-upsilon img-responsive" src="/assets/img/logo/upsilon.png"/></a></p>
     </div>
   </div>
 </div>

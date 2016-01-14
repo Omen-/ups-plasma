@@ -20,6 +20,15 @@ body
   background-color: #F0F0F0;
 }
 
+.body-fix-navbar
+{
+  padding-top: 50px;
+}
+
+.page-header-fix
+{
+  
+}
 
 p
 {
@@ -28,7 +37,7 @@ p
 
 h1, h2, h3, h4, h5, h6
 {
-  font-family: 'Droid Serif', serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .nav-normal
@@ -251,7 +260,10 @@ h1, h2, h3, h4, h5, h6
 
 .news .item > p
 {
-  text-align: left;
+  text-align: justify;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
 }
 
 .footer-container
@@ -304,8 +316,8 @@ h1, h2, h3, h4, h5, h6
   padding: 2em 0 0;
   text-align: center;
 }
-
 .sep
+
 {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -326,4 +338,14 @@ h1, h2, h3, h4, h5, h6
   margin: 0 auto;
   padding: 1em 0;
   max-height: 100px;
+}
+
+.upsilon-container img
+{
+  display: inline-block;
+}
+
+.logo-upsilon
+{
+  height: 2em;
 }

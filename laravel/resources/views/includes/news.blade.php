@@ -13,7 +13,7 @@
           </a>
           <h3>{{ $n->title }}</h3>
           <div class="hidden-lg hidden-md">
-            <p>{{ trim(shortify($n->content, 300)) }}</p>
+            <p>{{ trim(shortify($n->content, 200)) }}</p>
             <p><a href="{{ '/news/' .$n->id . '-' . sluggify($n->title) }}">✚</a></p>
           </div>
         </div>
@@ -22,8 +22,7 @@
       <div class="col-xs-12">
       @foreach($news as $n)
       <div class="item col-md-4 hidden-xs hidden-sm">
-        <p>{{ trim(shortify($n->content, 300)) }}</p>
-        <p><a href="{{ '/news/' .$n->id . '-' . sluggify($n->title) }}">✚</a></p>
+        <p>{{ trim(shortify($n->content, 200)) }}</p>
       </div>
       @endforeach
       </div>

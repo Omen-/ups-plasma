@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   @include('includes.head')
-  <body class="body">
+  <body class="body body-fix-navbar">
     @include('includes.navbar-front')
 
 
@@ -12,8 +12,8 @@
           <div class="carousel-inner">
             <div class="item active">
               <img src="/assets/img/banner.png" alt="" class="img-responsive">
-              <div class="carousel-caption">
-                <h1>Science et technologie des plasmas</h1>
+              <div class="carousel-caption hidden-xs">
+                <h1><b>Science et technologie des plasmas</b></h1>
               </div>
             </div>
           </div>
@@ -23,19 +23,19 @@
 
     <div class="container-fluid">
       <div class="row logo-container">
-        <div class="col-lg-2 col-md-4 col-lg-offset-1">
+        <div class="col-sm-2 col-xs-4 col-sm-offset-1">
           <img class="img-responsive" src="/assets/img/logo/ups.jpg" />
         </div>
-        <div class="col-lg-2 col-md-4">
+        <div class="col-sm-2 col-xs-4">
           <img class="img-responsive" src="/assets/img/logo/inrs.jpg" />
         </div>
-        <div class="col-lg-2 col-md-4">
+        <div class="col-sm-2 col-xs-4">
           <img class="img-responsive" src="/assets/img/logo/sherbrooke.svg" />
         </div>
-        <div class="col-lg-2 col-md-4">
+        <div class="col-sm-2 col-xs-4">
           <img class="img-responsive" src="/assets/img/logo/montreal.png" />
         </div>
-        <div class="col-lg-2 col-md-4">
+        <div class="col-sm-2 col-xs-4">
           <img class="img-responsive" src="/assets/img/logo/laval.jpg" />
         </div>
       </div>

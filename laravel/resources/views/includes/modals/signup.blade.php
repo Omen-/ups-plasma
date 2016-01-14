@@ -1,6 +1,6 @@
 <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
   <div class="modal-dialog">
-    <div class="panel panel-primary">
+    <div class="panel panel-primary" style="border-width:3px">
       <div class="panel-heading">
         <div class="panel-title">Pré-inscription administrative</div>
       </div>
