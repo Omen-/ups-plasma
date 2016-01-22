@@ -1,7 +1,7 @@
 function loadCalendar(id, inBlock)
 {
 
-  $('#' + inBlock).html('<iframe src="/raw-calendar?calendarId=pu3v73e3rqol9mtbd9fbp8k0ig@group.calendar.google.com" width="800" height="600" frameborder="0" scrolling="no"></iframe>');
+  $('#' + inBlock).html('<iframe src="https://calendar.google.com/calendar/embed?src=' + id + '&ctz=Europe/Paris" style="border: 0; min-height: 600px;" width="100%" frameborder="0" scrolling="no"></iframe>');
 
   /*$('#' + inBlock).fullCalendar({
     header: {
