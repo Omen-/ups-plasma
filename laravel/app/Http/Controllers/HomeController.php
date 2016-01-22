@@ -11,6 +11,6 @@ class HomeController extends Controller
 {
   public function home()
   {
-    return view('home', ['news' => News::orderBy('created_at','DESC')->limit(3)->get()]);
+    return view('home', ['news' => News::orderBy('created_at','DESC')->limit(4)->get()]);
   }
 }

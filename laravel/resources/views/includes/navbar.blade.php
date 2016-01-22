@@ -7,7 +7,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Science et technologie des plasmas</a>
+      <a class="navbar-brand" href="/">
+        <span class="hidden-xs">Science et technologie des plasmas</span>
+        <span class="visible-xs-inline">S.T.P</span>
+      </a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">

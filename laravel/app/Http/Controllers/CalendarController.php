@@ -11,7 +11,7 @@ class CalendarController extends Controller
 {
   public function index()
   {
-    return view('calendar', ['trainings' => \Auth::user()->trainings]);
+    return view('calendar', ['trainings' => (\Auth::user()->isAdmin() ? Training::all() :  \Auth::user()->trainings)]);
   }
 
   public function show()

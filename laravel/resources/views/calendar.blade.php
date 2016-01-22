@@ -20,6 +20,10 @@
     <div class="col-xs-8 col-xs-offset-2">
 			@foreach($trainings as $t)
 			<h1 class="page-header">Calendrier de la promotion "{{ $t->title }}"</h1>
+      @if(\Auth::user()->isAdmin())
+      <a class="btn btn-primary" href="/admin/training/edit/{{$t->id}}"><i class="fa fa-fw fa-pencil"></i> Editer</a>
+      <br>
+      @endif
 			<div class="calendar-container" id='calendar-{{ $t->id }}'></div>
 			<script>loadCalendar('{{ $t->calendar_id }}','calendar-{{ $t->id }}')</script>
 			@endforeach

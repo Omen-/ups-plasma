@@ -23,19 +23,19 @@
 
     <div class="container-fluid">
       <div class="row logo-container">
-        <div class="col-sm-2 col-xs-4 col-sm-offset-1">
+        <div class="col-sm-2 col-xs-4 col-sm-offset-1 vcenter">
           <img class="img-responsive" src="/assets/img/logo/ups.jpg" />
         </div>
-        <div class="col-sm-2 col-xs-4">
+        <div class="col-sm-2 col-xs-4 vcenter">
           <img class="img-responsive" src="/assets/img/logo/inrs.jpg" />
         </div>
-        <div class="col-sm-2 col-xs-4">
+        <div class="col-sm-2 col-xs-4 vcenter">
           <img class="img-responsive" src="/assets/img/logo/sherbrooke.svg" />
         </div>
-        <div class="col-sm-2 col-xs-4">
+        <div class="col-sm-2 col-sm-offset-0 col-xs-offset-2 col-xs-4 vcenter">
           <img class="img-responsive" src="/assets/img/logo/montreal.png" />
         </div>
-        <div class="col-sm-2 col-xs-4">
+        <div class="col-sm-2 col-xs-4 vcenter">
           <img class="img-responsive" src="/assets/img/logo/laval.jpg" />
         </div>
       </div>

@@ -1,6 +1,10 @@
 <div id="front-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="#">Science et technologie des plasmas</a>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+              <span class="hidden-xs">Science et technologie des plasmas</span>
+              <span class="visible-xs-inline">S.T.P</span>
+            </a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
         </div>
@@ -27,6 +31,7 @@
               @if(!Auth::check())
               <li>
                 <a href="#" data-toggle="modal" data-target="#signup-modal">Inscription</a>
+
               </li>
               <li>
                 <a href="#" data-toggle="modal" data-target="#login-modal">Connexion</a>

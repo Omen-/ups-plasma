@@ -25,9 +25,19 @@ body
   padding-top: 50px;
 }
 
+@media only screen and (min-width : 768px)
+{
+  .vcenter
+  {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+  }
+}
+
 .page-header-fix
 {
-  
+
 }
 
 p
