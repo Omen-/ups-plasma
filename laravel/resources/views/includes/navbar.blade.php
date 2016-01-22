@@ -15,20 +15,20 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="{{ Request::is('news') ? 'active' : '' }}"><a href="/news">News</a></li>
-        <li class="dropdown">
+        <li class="dropdown {{ Request::is('a/presentation-local') || Request::is('a/presentation-international') ? 'active' : '' }}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Présentation <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/a/presentation-local"><i class="fa fa-fw fa-map-marker"></i> Local</a></li>
             <li><a href="/a/presentation-international"><i class="fa fa-fw fa-globe"></i> International</a></li>
           </ul>
         </li>
-        <li>
+        <li class="{{ Request::is('a/plasma') ? 'active' : '' }}">
           <a href="/a/plasma">Plasma ?</a>
         </li>
-        <li>
+        <li class="{{ Request::is('a/debouches') ? 'active' : '' }}">
           <a href="/a/debouches">Débouchés</a>
         </li>
-        <li>
+        <li class="{{ Request::is('/about') ? 'active' : '' }}">
           <a target="_blank" href="/about">Plaquette</a>
         </li>
       </ul>

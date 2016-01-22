@@ -8,7 +8,7 @@
 @section('content')
 <section class="content-section container">
   <div class="row">
-    <div class="col-xs-offset-2 col-xs-8">
+    <div class="col-sm-offset-2 col-sm-8 col-xs-12">
       <h1 class="page-header">Liste des dossiers de pré-inscription</h1>
       @foreach($applications as $a)
       <div class="panel panel-default">

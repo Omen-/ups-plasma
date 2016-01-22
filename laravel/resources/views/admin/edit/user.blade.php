@@ -8,7 +8,7 @@
 @section('content')
 <section class="content-section container">
   <div class="row">
-    <div class="col-xs-offset-2 col-xs-8">
+    <div class="col-sm-offset-2 col-sm-8 col-xs-12">
       @if ($errors->any())
       <div class="alert alert-danger" role="alert">
         {!! implode('', $errors->all('<p><i class="fa fa-exclamation-circle"></i> :message</p>')) !!}

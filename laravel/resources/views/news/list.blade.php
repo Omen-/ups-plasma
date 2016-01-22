@@ -12,9 +12,9 @@
 @stop
 
 @section('content')
-<section class="container content-section">
+<section class="container">
   <div class="row">
-    <div class="col-md-8 col-sm-12">
+    <div class="col-lg-7 col-md-12 content-section">
       <h1 class="page-header">Flux d'informations</h1>
       @foreach($categories as $category)
       @if(!$category->news->isEmpty())
@@ -27,7 +27,7 @@
       <br>
       <div id="collapsable-news" data-columns>
         @foreach($news as $n)
-        <div class="col-sm-6 col-md-6 no-padding collapse in collapse-category-{{ $n->getCategory()->id }}">
+        <div class="col-md-6 col-lg-6 no-padding collapse in collapse-category-{{ $n->getCategory()->id }}">
           <div class="news-tile">
             <div class="news-tile-overlay"></div>
             <a href="{{ '/news/' .$n->id . '-' . sluggify($n->title) }}">
@@ -47,7 +47,7 @@
         @endforeach
     </div>
       </div>
-    <div class="col-md-4 col-sm-12">
+    <div class="col-lg-4 col-lg-offset-1 col-md-12 content-section">
       <h1 style="white-space: nowrap;" class="page-header">Dates importantes</h1>
       <br><br>
       <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src={{ get_content('calendar.important') }}&amp;color=%23B1365F&amp;ctz=Europe%2FParis" width="100%" style="border-width:0; min-height: 420px" frameborder="0" scrolling="no"></iframe>
