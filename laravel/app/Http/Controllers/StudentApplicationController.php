@@ -40,7 +40,7 @@ class StudentApplicationController extends Controller
     public function store(Request $request)
     {
       $rules = array(
-        'email' => 'required|email',
+        'email' => 'unique:student_application|required|email',
         'firstname' => 'required',
         'lastname' => 'required',
         'pdfs' => 'required',
