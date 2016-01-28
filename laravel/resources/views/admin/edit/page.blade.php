@@ -8,7 +8,7 @@
 @section('content')
 <section class="content-section container">
   <div class="row">
-    <div class="col-xs-offset-2 col-xs-8">
+    <div class="col-sm-offset-2 col-sm-8 col-xs-12">
       <form method="post" action="/admin/page/update/{{ $currentEditedPage->id }}">
         <div class="form-group">
           <label for="title">Titre de la page</label>

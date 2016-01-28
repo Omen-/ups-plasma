@@ -41,7 +41,7 @@ class UsersController extends Controller
     {
       $rules = array(
         'role' => 'required',
-        'email' => 'required|email',
+        'email' => 'unique:users|required|email',
         'password' => 'required',
         'lastname' => 'required',
         'firstname' => 'required',
