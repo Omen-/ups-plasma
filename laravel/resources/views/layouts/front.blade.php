@@ -13,7 +13,7 @@
             <div class="item active">
               <img src="/assets/img/banner.png" alt="" class="img-responsive">
               <div class="carousel-caption hidden-xs">
-                <h1><b>Science et technologie des plasmas</b></h1>
+                <h1><b>Sciences et technologies des plasmas</b></h1>
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <span class="hidden-xs">Science et technologie des plasmas</span>
+        <span class="hidden-xs">Sciences et technologies des plasmas</span>
         <span class="visible-xs-inline">S.T.P</span>
       </a>
     </div>
