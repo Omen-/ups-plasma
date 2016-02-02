@@ -355,6 +355,13 @@ h1, h2, h3, h4, h5, h6
   max-height: 100px;
 }
 
+.logo-container h3
+{
+    text-transform: uppercase;
+    color: #3d7ec0;
+    font-weight: bold;
+}
+
 .upsilon-container img
 {
   display: inline-block;
@@ -363,4 +370,9 @@ h1, h2, h3, h4, h5, h6
 .logo-upsilon
 {
   height: 2em;
+}
+
+.front-header
+{
+    background-color: #3d7ec0;
 }

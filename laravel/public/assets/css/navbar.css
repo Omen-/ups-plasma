@@ -109,6 +109,7 @@
     background-color: rgba(255, 255, 255, 0.95);
     border-width: 1px;
     border-radius: 0px;
+    margin-bottom: 0px;
 }
 #front-bootstrap-menu.navbar-default .navbar-nav>li>a {
     color: rgba(61, 126, 192, 1);

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   @include('includes.head')
-  <body class="body body-fix-navbar">
+  <body class="body">
+    <div class="container-fluid front-header">
+      <div class="row">
+          <p>a</p>
+      </div>
+    </div>
     @include('includes.navbar-front')
-
-
 
     <section class="container-fluid">
       <div class="row">
@@ -12,9 +15,9 @@
           <div class="carousel-inner">
             <div class="item active">
               <img src="/assets/img/banner.png" alt="" class="img-responsive">
-              <div class="carousel-caption hidden-xs">
+              <!--<div class="carousel-caption hidden-xs">
                 <h1><b>Sciences et technologies des plasmas</b></h1>
-              </div>
+            </div>-->
             </div>
           </div>
         </div>
@@ -23,6 +26,9 @@
 
     <div class="container-fluid">
       <div class="row logo-container">
+        <div class="col-xs-12">
+          <center><h3>Nos partenaires</h3></center>
+        </div>
         <div class="col-sm-2 col-xs-4 col-sm-offset-1 vcenter">
           <img class="img-responsive" src="/assets/img/logo/ups.jpg" />
         </div>
