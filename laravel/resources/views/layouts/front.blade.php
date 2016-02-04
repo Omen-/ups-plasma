@@ -29,20 +29,17 @@
         <div class="col-xs-12">
           <center><h3>Nos partenaires</h3></center>
         </div>
-        <div class="col-sm-2 col-xs-4 col-sm-offset-1 vcenter">
-          <img class="img-responsive" src="/assets/img/logo/ups.jpg" />
+        <div class="col-xs-offset-2 col-sm-2 col-xs-4 vcenter">
+          <img class="grayscale img-responsive" src="/assets/img/logo/inrs.jpg" />
         </div>
         <div class="col-sm-2 col-xs-4 vcenter">
-          <img class="img-responsive" src="/assets/img/logo/inrs.jpg" />
-        </div>
-        <div class="col-sm-2 col-xs-4 vcenter">
-          <img class="img-responsive" src="/assets/img/logo/sherbrooke.svg" />
+          <img class="grayscale img-responsive" src="/assets/img/logo/sherbrooke.svg" />
         </div>
         <div class="col-sm-2 col-sm-offset-0 col-xs-offset-2 col-xs-4 vcenter">
-          <img class="img-responsive" src="/assets/img/logo/montreal.png" />
+          <img class="grayscale img-responsive" src="/assets/img/logo/montreal.png" />
         </div>
         <div class="col-sm-2 col-xs-4 vcenter">
-          <img class="img-responsive" src="/assets/img/logo/laval.jpg" />
+          <img class="grayscale img-responsive" src="/assets/img/logo/laval.jpg" />
         </div>
       </div>
     </div>
