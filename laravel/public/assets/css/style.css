@@ -223,6 +223,11 @@ h1, h2, h3, h4, h5, h6
   background-color: #3d7ec0;
 }
 
+.affix
+{
+    top: 0;
+}
+
 .carousel-caption
 {
     padding-left: 5em;
@@ -346,6 +351,7 @@ h1, h2, h3, h4, h5, h6
 {
   background-color: white;
   vertical-align: middle;
+  padding-bottom: 1em;
 }
 
 .logo-container img
@@ -375,7 +381,29 @@ h1, h2, h3, h4, h5, h6
 .front-header
 {
     background-color: #3d7ec0;
+    color: white;
 }
+
+.front-header h1
+{
+  text-transform: uppercase;
+  text-align: right;
+  margin-bottom: 0px;
+  margin-top: 1em;
+}
+
+.front-header p
+{
+  margin-bottom: 2em;
+  text-align: right;
+}
+
+.front-header img
+{
+  left : 0;
+}
+
+
 
 img.grayscale
 {

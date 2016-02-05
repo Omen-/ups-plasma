@@ -1,4 +1,4 @@
-<div id="front-bootstrap-menu" class="navbar navbar-default" role="navigation">
+<div id="front-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation" style="width:100%;">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">

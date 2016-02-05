@@ -2,9 +2,15 @@
 <html>
   @include('includes.head')
   <body class="body">
-    <div class="container-fluid front-header">
+    <div class="container-fluid front-header front-bootstrap-menu-colapse">
       <div class="row">
-          <p>a</p>
+        <div class="col-xs-6 vcenter">
+          <h1>Sciences et technologies des plasmas</h1>
+          <p>Master du département EEA</p>
+        </div>
+        <div class="col-xs-4 vcenter">
+          <img class="img-responsive" src="/assets/img/logo/ups.png"/>
+        </div>
       </div>
     </div>
     @include('includes.navbar-front')
@@ -29,17 +35,17 @@
         <div class="col-xs-12">
           <center><h3>Nos partenaires</h3></center>
         </div>
-        <div class="col-xs-offset-2 col-sm-2 col-xs-4 vcenter">
-          <img class="grayscale img-responsive" src="/assets/img/logo/inrs.jpg" />
+        <div class="col-xs-offset-2 col-sm-2 col-xs-4 vcenter" style="min-height: 100px">
+          <a target="_blank" href="http://www.inrs.ca/"><img class="grayscale img-responsive" src="/assets/img/logo/inrs.jpg" /></a>
         </div>
-        <div class="col-sm-2 col-xs-4 vcenter">
-          <img class="grayscale img-responsive" src="/assets/img/logo/sherbrooke.svg" />
+        <div class="col-sm-2 col-xs-4 vcenter" style="min-height: 100px">
+          <a target="_blank" href="http://www.usherbrooke.ca/"><img class="grayscale img-responsive" src="/assets/img/logo/sherbrooke.svg" /></a>
         </div>
-        <div class="col-sm-2 col-sm-offset-0 col-xs-offset-2 col-xs-4 vcenter">
-          <img class="grayscale img-responsive" src="/assets/img/logo/montreal.png" />
+        <div class="col-sm-2 col-sm-offset-0 col-xs-offset-2 col-xs-4 vcenter" style="min-height: 100px">
+          <a target="_blank" href="http://www.umontreal.ca/english/"><img class="grayscale img-responsive" src="/assets/img/logo/montreal.png" /></a>
         </div>
-        <div class="col-sm-2 col-xs-4 vcenter">
-          <img class="grayscale img-responsive" src="/assets/img/logo/laval.jpg" />
+        <div class="col-sm-2 col-xs-4 vcenter" style="min-height: 100px">
+          <a target="_blank" href="http://www2.ulaval.ca/accueil.html"><img class="grayscale img-responsive" src="/assets/img/logo/laval.jpg" /></a>
         </div>
       </div>
     </div>
