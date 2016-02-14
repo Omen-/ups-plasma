@@ -13,12 +13,8 @@
               <li>
                 <a href="/news">News</a>
               </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Présentation <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/a/presentation-local"><i class="fa fa-fw fa-map-marker"></i> Local</a></li>
-                  <li><a href="/a/presentation-international"><i class="fa fa-fw fa-globe"></i> International</a></li>
-                </ul>
+              <li class="{{ Request::is('a/presentation') ? 'active' : '' }}">
+                <a href="/a/presentation">Presentation</a>
               </li>
               <li>
                 <a href="/a/plasma">Plasma ?</a>

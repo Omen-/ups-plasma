@@ -10,6 +10,7 @@
       </adress>
     </div>
     <div class="text-footer col-xs-4 text-center hidden-xs">
+      <u><a href="mailto:masterstp@laplace.univ-tlse.fr">Nous contacter</a></u><br><br>
       Retrouvez-nous sur les réseaux sociaux<br>
       <br>
       <ul class="list-inline">
@@ -27,7 +28,7 @@
     </div>
     <div class="col-xs-12 visible-xs-block">
       <center>
-        <p>© 2015 <a href="mailto:masterstp@laplace.univ-tlse.fr">Master STP</a>, tous droits réservés</p>
+        <p>© 2015 Master STP, tous droits réservés</p>
         <p><a href="http://www.univ-toulouse.fr/universite/idex-de-toulouse">Avec le soutien de l'IDEX de toulouse</a></p>
         <p><u><a href="http://www.univ-toulouse.fr/universite/idex-de-toulouse">Mentions légales</a></u></p>
         <p class="upsilon-container">Site réalisé par <a href="http://upsilon-toulouse.fr/" target="_blank"><img class="logo-upsilon img-responsive" src="/assets/img/logo/upsilon.png"/></a></p>
