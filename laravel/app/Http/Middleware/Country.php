@@ -17,6 +17,7 @@ class Country
     {
         $banned_countries = array("US", "CA");
         $country = file_get_contents("http://ipinfo.io/" . $_SERVER['REMOTE_ADDR'] . "/country");
+        echo('<!-- ' . $country . ' -->');
         if(in_array($country, $banned_countries)) {
             die();
         }
