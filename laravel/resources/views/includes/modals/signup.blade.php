@@ -10,8 +10,8 @@
           {!! implode('', $errors->all('<p><i class="fa fa-exclamation-circle"></i> :message</p>')) !!}
         </div>
         @endif
-          <p>Cette pré-inscription ne constitue en rien une inscription officielle à la formation STP. Elle est purement administrative.</p>
-          <p>Veuillez fournir les fichiers suivents au format PDF : Dernier diplome, Lettre de motivation, Relevé de note de l'année précédente</p>
+        <p>Cette pré-inscription ne constitue en rien une inscription officielle à la formation STP. Elle est purement administrative.</p>
+        <p>Veuillez fournir les fichiers suivants au format PDF : Dernier diplôme, Lettre de motivation, Relevé de note de l'année précédente</p>
           <br>
         <form id="signupform" class="form-horizontal" role="form" method="post" action="/student-application/store" enctype="multipart/form-data">
           <div class="form-group">
