@@ -11,8 +11,8 @@
 |
 */
 
-Route::group(['middleware' => ['country']], function()
-{
+/*Route::group(['middleware' => ['country']], function()
+{*/
 
 Route::get('/', 'HomeController@home');
 
@@ -87,4 +87,4 @@ Route::get('/news/{id}-{title}', 'NewsController@show');
 Route::get('/news', 'NewsController@all');
 //Route::get('/icalendar', function() { return view('important-calendar'); });
 Route::get('/raw-calendar', 'CalendarController@show');
-});
+/*});*/
