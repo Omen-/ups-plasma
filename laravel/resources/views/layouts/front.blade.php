@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-xs-6 vcenter">
           <h1>Sciences et technologies des plasmas</h1>
-          <p>Master du département EEA</p>
+          <p><a href="http://www.eea.ups-tlse.fr/">Master du département EEA</a></p>
         </div>
         <div class="col-xs-4 vcenter">
           <a href="http://www.univ-tlse3.fr/"><img class="img-responsive" src="/assets/img/logo/ups.png"/></a>

@@ -1,10 +1,6 @@
 <div id="front-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation" style="width:100%;">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">
-              <span class="hidden-xs">Sciences et technologies des plasmas</span>
-              <span class="visible-xs-inline">S.T.P</span>
-            </a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
         </div>
