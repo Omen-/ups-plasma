@@ -3,7 +3,7 @@
   @include('includes.head')
   <body class="body">
     <div class="container-fluid front-header front-bootstrap-menu-colapse">
-      <div class="row">
+      <div class="row hidden-xs hidden-sm">
         <div class="col-xs-6 vcenter">
           <h1>Sciences et technologies des plasmas</h1>
           <p><a style="color:white;" href="http://www.eea.ups-tlse.fr/">Master du département EEA</a></p>
@@ -11,6 +11,11 @@
         <div class="col-xs-4 vcenter">
           <a href="http://www.univ-tlse3.fr/"><img class="img-responsive" src="/assets/img/logo/ups.png"/></a>
         </div>
+      </div>
+      <div class="row visible-xs visible-sm">
+          <div class=" col-xs-offset-2 col-xs-8 vcenter">
+            <a href="http://www.univ-tlse3.fr/"><img  class="img-responsive" src="/assets/img/logo/ups.png"/></a>
+          </div>
       </div>
     </div>
     @include('includes.navbar-front')
