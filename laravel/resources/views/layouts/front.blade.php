@@ -6,10 +6,10 @@
       <div class="row hidden-xs hidden-sm">
         <div class="col-xs-6 vcenter">
           <h1>Sciences et technologies des plasmas</h1>
-          <p><a style="color:white;" href="http://www.eea.ups-tlse.fr/">Master du département EEA</a></p>
+          <p><a style="color:white;" target="_blank" href="http://www.eea.ups-tlse.fr/">Master du département EEA</a></p>
         </div>
         <div class="col-xs-4 vcenter">
-          <a href="http://www.univ-tlse3.fr/"><img class="img-responsive" src="/assets/img/logo/ups.png"/></a>
+          <a target="_blank" href="http://www.univ-tlse3.fr/"><img class="img-responsive" src="/assets/img/logo/ups.png"/></a>
         </div>
       </div>
       <div class="row visible-xs visible-sm">

@@ -4,7 +4,7 @@
       <address>
         <a href="mailto:masterstp@laplace.univ-tlse.fr">Master STP</a><br>
         Université Paul Sabatier<br>
-        LAPLACE<br>
+        <a href="http://www.laplace.univ-tlse.fr/">LAPLACE</a><br>
         Bat. 3R3, 118 Route de Narobonne<br>
         31062 TOULOUSE Cedex 9<br>
       </adress>
