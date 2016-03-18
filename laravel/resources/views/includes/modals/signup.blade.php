@@ -36,7 +36,7 @@
             <label for="lastname" class="col-md-3 control-label">Fichiers</label>
             <div class="col-md-9">
               <label class="btn btn-default" for="upload-file-selector">
-                <input style="display:none" id="upload-file-selector" name="pdfs[]" type="file" multiple>
+                <input id="upload-file-selector" name="pdfs[]" type="file" multiple>
                 <i class="fa fa-upload"></i> Choisir les fichiers
               </label>
             </div>
