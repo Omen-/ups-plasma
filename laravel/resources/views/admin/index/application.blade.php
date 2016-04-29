@@ -23,6 +23,7 @@
             <li><a href="/admin/stored-pdf/show/{{ $p->id }}" target="_blank">{{ $p->title }}</a></li>
             @endforeach
           </ul>
+          <a class="btn btn-danger" data-confirm="le dossier d'inscription de {{ $a->first_name . ' ' . $a->last_name }}" href="/admin/student-app/destroy/{{ $a->id }}"><i class="fa fa-fw fa-trash"></i></a>
         </div>
       </div>
       @endforeach

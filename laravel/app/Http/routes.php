@@ -76,6 +76,7 @@ Route::group(['middleware' => ['auth', 'admin']], function()
   Route::post('/admin/content/store', 'EditableContentController@store');
 
   Route::get('/admin/student-app/index', 'StudentApplicationController@index');
+  Route::get('/admin/student-app/destroy/{id}', 'StudentApplicationController@destroy');
   Route::get('/admin/stored-pdf/show/{id}', 'StoredPdfController@show');
 
   Route::post('/ajax/image/store', 'EditableContentController@storeImage');

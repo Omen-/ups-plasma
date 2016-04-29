@@ -115,6 +115,7 @@ class StudentApplicationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        StudentApplication::destroy($id);
+        return \Redirect::back();
     }
 }
